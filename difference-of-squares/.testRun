@@ -1,0 +1,25 @@
+>cargo test
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+
+
+running 9 tests
+test test_difference_1 ... ok
+test test_difference_100 ... ok
+test test_difference_5 ... ok
+test test_square_of_sum_1 ... ok
+test test_square_of_sum_100 ... ok
+test test_square_of_sum_5 ... ok
+test test_sum_of_squares_1 ... ok
+test test_sum_of_squares_100 ... ok
+test test_sum_of_squares_5 ... ok
+
+test result: ok. 9 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+
