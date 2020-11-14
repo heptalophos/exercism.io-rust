@@ -1,11 +1,11 @@
 pub fn reply(message: &str) -> &str {
-    let question = 
-        |phrase: &str| phrase.ends_with("?");
-    let silent   = 
-        |phrase: &str| phrase.is_empty();
-    let yelling  = 
-        |phrase: &str| phrase.contains(char::is_alphabetic)
-                       && phrase == phrase.to_uppercase();
+    let question = |phrase: &str| 
+                   phrase.ends_with("?");
+    let silent   = |phrase: &str| 
+                   phrase.is_empty();
+    let yelling  = |phrase: &str| 
+                   phrase.contains(char::is_alphabetic)
+                   && phrase == phrase.to_uppercase();
 
     match message.trim() {
         m if silent(m) => "Fine. Be that way!",
