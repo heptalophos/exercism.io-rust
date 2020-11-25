@@ -1,7 +1,7 @@
 use chrono::{Duration, NaiveTime};
 use std::fmt;
 
-pub struct Clock{
+pub struct Clock {
     time: NaiveTime
 }
 
@@ -21,13 +21,14 @@ impl Clock {
     }
 }
 
-// impl fmt::Display for Clock {
-//     fn fmt(&self, f: &mut fmt::Formatter<'_>) -> fmt::Result {
-//         let _time = &self.time.format("%H:%M").to_string();
-//         write!(f, "{}", _time)
-//     }
-impl ToString for Clock {
-    fn to_string(&self) -> String {
-        format!("{}", &self.time.format("%H:%M").to_string())
+impl fmt::Display for Clock {
+    fn fmt(&self, f: &mut fmt::Formatter<'_>) -> fmt::Result {
+        let _time = &self.time.format("%H:%M").to_string();
+        write!(f, "{}", _time)
     }
 }
+// impl ToString for Clock {
+//     fn to_string(&self) -> String {
+//         format!("{}", &self.time.format("%H:%M").to_string())
+//      }
+// }
