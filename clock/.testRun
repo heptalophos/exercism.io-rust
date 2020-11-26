@@ -1,0 +1,69 @@
+>cargo test
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+
+
+running 53 tests
+test test_add_across_midnight ... ok
+test test_add_minutes ... ok
+test test_add_more_than_one_day ... ok
+test test_add_more_than_one_hour ... ok
+test test_add_more_than_two_days ... ok
+test test_add_more_than_two_hours_with_carry ... ok
+test test_add_no_minutes ... ok
+test test_add_to_next_hour ... ok
+test test_compare_clocks_a_minute_apart ... ok
+test test_compare_clocks_an_hour_apart ... ok
+test test_compare_clocks_for_equality ... ok
+test test_compare_clocks_with_hour_overflow ... ok
+test test_compare_clocks_with_hour_overflow_by_several_days ... ok
+test test_compare_clocks_with_minutes_overflow ... ok
+test test_compare_clocks_with_minutes_overflow_by_several_days ... ok
+test test_compare_clocks_with_negative_hour ... ok
+test test_compare_clocks_with_negative_hour_that_wraps ... ok
+test test_compare_clocks_with_negative_hour_that_wraps_multiple_times ... ok
+test test_compare_clocks_with_negative_hours_and_minutes ... ok
+test test_compare_clocks_with_negative_hours_and_minutes_that_wrap ... ok
+test test_compare_clocks_with_negative_minute ... ok
+test test_compare_clocks_with_negative_minute_that_wraps ... ok
+test test_compare_clocks_with_negative_minute_that_wraps_multiple ... ok
+test test_compare_full_clock_and_zeroed_clock ... ok
+test test_hour_rolls_over ... ok
+test test_hour_rolls_over_continuously ... ok
+test test_hours_and_minutes_roll_over ... ok
+test test_hours_and_minutes_roll_over_continuously ... ok
+test test_hours_and_minutes_roll_over_to_exactly_midnight ... ok
+test test_midnight_is_zero_hours ... ok
+test test_minutes_roll_over ... ok
+test test_minutes_roll_over_continuously ... ok
+test test_negative_hour ... ok
+test test_negative_hour_and_minutes_both_roll_over ... ok
+test test_negative_hour_and_minutes_both_roll_over_continuously ... ok
+test test_negative_hour_roll_over ... ok
+test test_negative_hour_roll_over_continuously ... ok
+test test_negative_minutes ... ok
+test test_negative_minutes_roll_over ... ok
+test test_negative_minutes_roll_over_continuously ... ok
+test test_negative_sixty_minutes_is_prev_hour ... ok
+test test_on_the_hour ... ok
+test test_sixty_minutes_is_next_hour ... ok
+test test_past_the_hour ... ok
+test test_subtract_across_midnight ... ok
+test test_subtract_minutes ... ok
+test test_subtract_more_than_an_hour ... ok
+test test_subtract_more_than_one_day ... ok
+test test_subtract_more_than_two_hours ... ok
+test test_subtract_more_than_two_hours_with_borrow ... ok
+test test_subtract_mores_than_two_days ... ok
+test test_subtract_to_previous_hour ... ok
+test test_zero_hour_and_negative_minutes ... ok
+
+test result: ok. 53 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+
