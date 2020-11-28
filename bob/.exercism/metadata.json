@@ -1,9 +1,9 @@
 {
-    "track":"rust",
-    "exercise":"bob",
-    "id":"419c03ef78cf4a05b88667482ae270fc",
-    "url":"https://exercism.io/tracks/rust/exercises/bob/solutions/419c03ef78cf4a05b88667482ae270fc",
-    "handle":"heptalophos",
-    "is_requester":true,
-    "auto_approve":false
+    "track": "rust",
+    "exercise": "bob",
+    "id": "419c03ef78cf4a05b88667482ae270fc",
+    "url": "https://exercism.io/tracks/rust/exercises/bob/solutions/419c03ef78cf4a05b88667482ae270fc",
+    "handle": "heptalophos",
+    "is_requester": true,
+    "auto_approve": false
 }
