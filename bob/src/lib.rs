@@ -8,11 +8,15 @@ pub fn reply(message: &str) -> &str {
                    && phrase == phrase.to_uppercase();
 
     match message.trim() {
-        m if silent(m) => "Fine. Be that way!",
-        m if question(m) & 
-             yelling(m) => "Calm down, I know what I'm doing!",
-        m if question(m) => "Sure.",
-        m if yelling(m) => "Whoa, chill out!",
-        _ => "Whatever." 
+        m if silent(m) => 
+            "Fine. Be that way!",
+        m if question(m) & yelling(m) => 
+            "Calm down, I know what I'm doing!",
+        m if question(m) => 
+            "Sure.",
+        m if yelling(m) => 
+            "Whoa, chill out!",
+        _ => 
+            "Whatever." 
     }
 }
