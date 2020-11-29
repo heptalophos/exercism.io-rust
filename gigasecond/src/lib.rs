@@ -6,5 +6,5 @@ pub fn after(start: DateTime<Utc>) -> DateTime<Utc> {
     
     let gigasecond: i64 = 10i64.pow(9);
     
-    return start + Duration::seconds(gigasecond)
+    start + Duration::seconds(gigasecond)
 }
