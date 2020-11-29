@@ -41,7 +41,6 @@ test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
 
 
 
-
 >cargo test
 
 running 0 tests
@@ -83,3 +82,87 @@ running 0 tests
 
 test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
 
+
+>cargo test
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+
+
+running 25 tests
+test test_alternate_silence ... ok
+test test_asking_a_numeric_question ... ok
+test test_asking_a_question ... ok
+test test_asking_gibberish ... ok
+test test_ending_with_whitespace ... ok
+test test_forceful_question ... ok
+test test_multiple_line_question ... ok
+test test_no_letters ... ok
+test test_nonquestion_ending_with_whitespace ... ok
+test test_nonletters_with_question ... ok
+test test_other_whitespace ... ok
+test test_prolonged_silence ... ok
+test test_prattling_on ... ok
+test test_question_with_no_letters ... ok
+test test_shouting ... ok
+test test_shouting_gibberish ... ok
+test test_shouting_numbers ... ok
+test test_shouting_with_no_exclamation_mark ... ok
+test test_shouting_with_special_characters ... ok
+test test_silence ... ok
+test test_starting_with_whitespace ... ok
+test test_statement_containing_question_mark ... ok
+test test_stating_something ... ok
+test test_talking_forcefully ... ok
+test test_using_acronyms_in_regular_speech ... ok
+
+test result: ok. 25 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+
+
+
+>cargo test
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+
+
+running 25 tests
+test test_alternate_silence ... ok
+test test_asking_a_numeric_question ... ok
+test test_asking_a_question ... ok
+test test_asking_gibberish ... ok
+test test_ending_with_whitespace ... ok
+test test_forceful_question ... ok
+test test_multiple_line_question ... ok
+test test_no_letters ... ok
+test test_nonletters_with_question ... ok
+test test_nonquestion_ending_with_whitespace ... ok
+test test_other_whitespace ... ok
+test test_prattling_on ... ok
+test test_prolonged_silence ... ok
+test test_question_with_no_letters ... ok
+test test_shouting ... ok
+test test_shouting_gibberish ... ok
+test test_shouting_numbers ... ok
+test test_shouting_with_no_exclamation_mark ... ok
+test test_shouting_with_special_characters ... ok
+test test_silence ... ok
+test test_starting_with_whitespace ... ok
+test test_statement_containing_question_mark ... ok
+test test_stating_something ... ok
+test test_using_acronyms_in_regular_speech ... ok
+test test_talking_forcefully ... ok
+
+test result: ok. 25 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
