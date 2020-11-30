@@ -1,0 +1,32 @@
+>cargo test
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+
+
+running 16 tests
+test all_numbers_are_multiples_of_1 ... ok
+test factors_not_relatively_prime ... ok
+test each_multiple_is_only_counted_once ... ok
+test a_much_larger_limit ... ok
+test more_than_one_factor_with_multiples_within_limit ... ok
+test more_than_one_multiple_within_limit ... ok
+test no_multiples_within_limit ... ok
+test one_factor_has_multiples_within_limit ... ok
+test one_factor_is_a_multiple_of_another ... ok
+test some_pairs_of_factors_relatively_prime_and_some_not ... ok
+test the_factor_0_does_not_affect_the_sum_of_multiples_of_other_factors ... ok
+test the_only_multiple_of_0_is_0 ... ok
+test three_factors ... ok
+test no_factors_means_an_empty_sum ... ok
+test much_larger_factors ... ok
+test solutions_using_include_exclude_must_extend_to_cardinality_greater_than_3 ... ok
+
+test result: ok. 16 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+
