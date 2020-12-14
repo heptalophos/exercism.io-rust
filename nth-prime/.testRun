@@ -1,0 +1,20 @@
+cargo test
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+
+
+running 4 tests
+test test_first_prime ... ok
+test test_second_prime ... ok
+test test_sixth_prime ... ok
+test test_big_prime ... ok
+
+test result: ok. 4 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+
