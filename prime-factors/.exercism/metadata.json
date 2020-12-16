@@ -1,1 +1,9 @@
-{"track":"rust","exercise":"prime-factors","id":"26a58f602fe64c23ab4ddd5481661eef","url":"https://exercism.io/my/solutions/26a58f602fe64c23ab4ddd5481661eef","handle":"heptalophos","is_requester":true,"auto_approve":false}
+{
+    "track": "rust",
+    "exercise": "prime-factors",
+    "id": "26a58f602fe64c23ab4ddd5481661eef",
+    "url": "https://exercism.io/tracks/rust/exercises/prime-factors/solutions/26a58f602fe64c23ab4ddd5481661eef",
+    "handle": "heptalophos",
+    "is_requester": true,
+    "auto_approve": false
+}
