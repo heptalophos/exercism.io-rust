@@ -2,6 +2,7 @@ use chrono::{Duration, NaiveTime};
 use std::fmt;
 
 #[derive(Debug, PartialEq)]
+
 pub struct Clock {
     minutes: NaiveTime
 }
