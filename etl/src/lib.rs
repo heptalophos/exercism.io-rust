@@ -1,5 +1,13 @@
 use std::collections::BTreeMap;
 
-pub fn transform(h: &BTreeMap<i32, Vec<char>>) -> BTreeMap<char, i32> {
-    unimplemented!("How will you transform the tree {:?}?", h)
+pub fn transform(legacy: &BTreeMap<i32, Vec<char>>) -> 
+                                    BTreeMap<char, i32> {
+    legacy
+    .iter()
+    .flat_map(|(score, ls)| {
+                 ls.iter().map(move |ch| {
+                        (ch.to_ascii_lowercase(), *score)
+                 })
+    })
+    .collect()                                    
 }
