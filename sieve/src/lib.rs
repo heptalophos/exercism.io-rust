@@ -18,8 +18,8 @@ fn eratosthenes(mut nrange: Vec<u64>,
     if nrange.is_empty() { primes }
     else { 
         let p = nrange[0];
-        nrange.retain(|&n| n % p != 0 );
         primes.push(p);
+        nrange.retain(|&n| n % p != 0 );
         eratosthenes(nrange, primes)
     }
 }
