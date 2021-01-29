@@ -1,30 +1,23 @@
-# Grains
+# Anagram
 
-Calculate the number of grains of wheat on a chessboard given that the number
-on each square doubles.
+An anagram is a rearrangement of letters to form a new word.
+Given a word and a list of candidates, select the sublist of anagrams of the given word.
 
-There once was a wise servant who saved the life of a prince. The king
-promised to pay whatever the servant could dream up. Knowing that the
-king loved chess, the servant told the king he would like to have grains
-of wheat. One grain on the first square of a chess board, with the number
-of grains doubling on each successive square.
+Given `"listen"` and a list of candidates like `"enlists" "google"
+"inlets" "banana"` the program should return a list containing
+`"inlets"`.
 
-There are 64 squares on a chessboard (where square 1 has one grain, square 2 has two grains, and so on).
+# Hints
 
-Write code that shows:
-- how many grains were on a given square, and
-- the total number of grains on the chessboard
+The solution is case insensitive, which means `"WOrd"` is the same as `"word"` or `"woRd"`. It may help to take a peek at the [std library](https://doc.rust-lang.org/std/primitive.char.html) for functions that can convert between them.
 
-## For bonus points
+The solution cannot contain the input word. A word is always an anagram of itself, which means it is not an interesting result. Given `"hello"` and the list `["hello", "olleh"]` the answer is `["olleh"]`.
 
-Did you get the tests passing and the code clean? If you want to, these
-are some additional things you could try:
+You are going to have to adjust the function signature provided in the stub in order for the lifetimes to work out properly. This is intentional: what's there demonstrates the basics of lifetime syntax, and what's missing teaches how to interpret lifetime-related compiler errors.
 
-- Optimize for speed.
-- Optimize for readability.
+Try to limit case changes. Case changes are expensive in terms of time, so it's faster to minimize them.
 
-Then please share your thoughts in a comment on the submission. Did this
-experiment make the code better? Worse? Did you learn anything from it?
+If sorting, consider [sort_unstable](https://doc.rust-lang.org/std/primitive.slice.html#method.sort_unstable) which is typically faster than stable sorting. When applicable, unstable sorting is preferred because it is generally faster than stable sorting and it doesn't allocate auxiliary memory.
 
 ## Rust Installation
 
@@ -92,7 +85,7 @@ Generally you should submit all files in which you implemented your solution (`s
 
 The [exercism/rust](https://github.com/exercism/rust) repository on GitHub is the home for all of the Rust exercises. If you have feedback about an exercise, or want to help implement new exercises, head over there and create an issue. Members of the rust track team are happy to help!
 
-If you want to know more about Exercism, take a look at the [contribution guide](https://github.com/exercism/docs/blob/main/contributing-to-language-tracks/README.md).
+If you want to know more about Exercism, take a look at the [contribution guide](https://github.com/exercism/docs/blob/master/contributing-to-language-tracks/README.md).
 
 [help-page]: https://exercism.io/tracks/rust/learning
 [modules]: https://doc.rust-lang.org/book/ch07-02-defining-modules-to-control-scope-and-privacy.html
@@ -101,7 +94,7 @@ If you want to know more about Exercism, take a look at the [contribution guide]
 
 ## Source
 
-JavaRanch Cattle Drive, exercise 6 [http://www.javaranch.com/grains.jsp](http://www.javaranch.com/grains.jsp)
+Inspired by the Extreme Startup game [https://github.com/rchatley/extreme_startup](https://github.com/rchatley/extreme_startup)
 
 ## Submitting Incomplete Solutions
 It's possible to submit an incomplete solution so you can see how others have completed the exercise.

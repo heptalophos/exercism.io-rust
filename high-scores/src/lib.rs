@@ -27,7 +27,7 @@ impl HighScores {
 
     pub fn personal_top_three(&self) -> Vec<u32> {
         let mut cscores = 
-            self.scores.clone();
+            self.scores.to_vec();
         cscores.sort();
         cscores.iter()
                .rev()
