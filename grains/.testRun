@@ -25,3 +25,33 @@ running 0 tests
 
 test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
 
+
+
+
+>cargo test
+
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+
+
+running 10 tests
+test test_1 ... ok
+test test_16 ... ok
+test test_2 ... ok
+test test_3 ... ok
+test test_32 ... ok
+test test_4 ... ok
+test test_64 ... ok
+test test_returns_the_total_number_of_grains_on_the_board ... ok
+test test_square_0_raises_an_exception ... ok
+test test_square_greater_than_64_raises_an_exception ... ok
+
+test result: ok. 10 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+
