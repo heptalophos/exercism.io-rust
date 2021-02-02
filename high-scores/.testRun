@@ -55,3 +55,33 @@ running 0 tests
 
 test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
 
+
+
+
+>cargo test
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+
+
+running 11 tests
+test test_latest_score ... ok
+test test_latest_score_empty ... ok
+test test_list_of_scores ... ok
+test test_personal_best ... ok
+test test_personal_best_empty ... ok
+test test_personal_top_three_empty ... ok
+test test_personal_top_three ... ok
+test test_personal_top_three_only_one_score ... ok
+test test_personal_top_three_with_tie ... ok
+test test_personal_top_three_highest_to_lowest ... ok
+test test_personal_top_three_with_less_than_three_scores ... ok
+
+test result: ok. 11 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+
