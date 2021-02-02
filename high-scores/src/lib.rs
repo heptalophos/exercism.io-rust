@@ -15,24 +15,17 @@ impl HighScores {
     }
 
     pub fn latest(&self) -> Option<u32> {
-        self.scores.last()
-                   .copied()
+        self.scores.last().copied()
     }
 
     pub fn personal_best(&self) -> Option<u32> {
-        self.scores.iter()
-                   .max()
-                   .copied()
+        self.scores.iter().max().copied()
     }
 
     pub fn personal_top_three(&self) -> Vec<u32> {
-        let mut cscores = 
-            self.scores.to_vec();
+        let mut cscores = self.scores.to_vec();
         cscores.sort();
-        cscores.iter()
-               .rev()
-               .take(3)
-               .copied()
+        cscores.iter().rev().take(3).copied()
                .collect()
     }
 }
