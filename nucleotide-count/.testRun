@@ -1,0 +1,29 @@
+>cargo test
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+
+
+running 13 tests
+test count_invalid_dna ... ok
+test count_invalid_nucleotide ... ok
+test count_returns_result ... ok
+test counts_invalid_nucleotide_results_in_err ... ok
+test counts_returns_result ... ok
+test test_can_count_one_nucleotide_in_singlecharacter_input ... ok
+test test_count_empty ... ok
+test test_count_only_thymine ... ok
+test test_count_repetitive_cytosine ... ok
+test test_empty_strand ... ok
+test test_strand_with_invalid_nucleotides ... ok
+test test_strand_with_multiple_nucleotides ... ok
+test test_strand_with_repeated_nucleotide ... ok
+
+test result: ok. 13 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+
