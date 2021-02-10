@@ -2,3 +2,4 @@
 edition = "2018"
 name = "rna-transcription"
 version = "1.0.0"
+authors = ["heptalophos"]
