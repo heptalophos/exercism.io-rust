@@ -1,0 +1,26 @@
+>cargo test
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+
+
+running 10 tests
+test test_acid_equals_acid ... ok
+test test_invalid_dna_input ... ok
+test test_invalid_rna_input ... ok
+test test_transcribes_adenine_uracil ... ok
+test test_transcribes_all_dna_to_rna ... ok
+test test_transcribes_cytosine_guanine ... ok
+test test_transcribes_guanine_cytosine ... ok
+test test_transcribes_thymine_to_adenine ... ok
+test test_valid_dna_input ... ok
+test test_valid_rna_input ... ok
+
+test result: ok. 10 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+
