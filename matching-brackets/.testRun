@@ -1,0 +1,35 @@
+>cargo test
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+
+
+running 19 tests
+test complex_latex_expression ... ok
+test early_incomplete_brackets ... ok
+test early_mismatched_brackets ... ok
+test empty_string ... ok
+test math_expression ... ok
+test paired_and_nested_brackets ... ok
+test paired_and_incomplete_brackets ... ok
+test paired_and_wrong_nested_brackets ... ok
+test paired_square_brackets ... ok
+test paired_with_whitespace ... ok
+test partially_paired_brackets ... ok
+test several_paired_brackets ... ok
+test simple_nested_brackets ... ok
+test too_many_closing_brackets ... ok
+test unopened_closing_brackets ... ok
+test unpaired_and_nested_brackets ... ok
+test unpaired_brackets ... ok
+test wrong_closing_bracket ... ok
+test wrong_ordered_brackets ... ok
+
+test result: ok. 19 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+
