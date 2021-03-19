@@ -6,11 +6,11 @@ pub fn brackets_are_balanced(string: &str) -> bool {
         match ch {
             '}' | ']' | ')' 
                 if Some(ch) != stack.pop() =>
-                        return false,
+                    return false,
             '{' => stack.push('}'),
             '[' => stack.push(']'),
             '(' => stack.push(')'),
-            _   => (),
+             _  => (),
         }
     }
     return stack.is_empty()
