@@ -2,6 +2,7 @@
 edition = "2018"
 name = "triangle"
 version = "0.0.0"
+authors = ["heptalophos"]
 
 [features]
 generic = []
