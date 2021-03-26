@@ -154,7 +154,7 @@ fn sum_of_two_sides_must_equal_or_exceed_the_remaining_side_two() {
 }
 
 #[test]
-// #[ignore]
+#[ignore]
 #[cfg(feature = "generic")]
 fn scalene_triangle_with_floating_point_sides() {
     let sides = [0.4, 0.6, 0.3];
@@ -165,7 +165,7 @@ fn scalene_triangle_with_floating_point_sides() {
 }
 
 #[test]
-// #[ignore]
+#[ignore]
 #[cfg(feature = "generic")]
 fn equilateral_triangles_with_floating_point_sides() {
     let sides = [0.2, 0.2, 0.2];
@@ -175,7 +175,7 @@ fn equilateral_triangles_with_floating_point_sides() {
 }
 
 #[test]
-// #[ignore]
+#[ignore]
 #[cfg(feature = "generic")]
 fn isosceles_triangle_with_floating_point_sides() {
     let sides = [0.3, 0.4, 0.4];
@@ -186,7 +186,7 @@ fn isosceles_triangle_with_floating_point_sides() {
 }
 
 #[test]
-// #[ignore]
+#[ignore]
 #[cfg(feature = "generic")]
 fn invalid_triangle_with_floating_point_sides_one() {
     let sides = [0.0, 0.4, 0.3];
@@ -195,7 +195,7 @@ fn invalid_triangle_with_floating_point_sides_one() {
 }
 
 #[test]
-// #[ignore]
+#[ignore]
 #[cfg(feature = "generic")]
 fn invalid_triangle_with_floating_point_sides_two() {
     let sides = [0.1, 0.3, 0.5];
