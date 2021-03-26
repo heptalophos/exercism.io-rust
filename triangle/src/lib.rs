@@ -6,47 +6,50 @@ pub struct Triangle {
 
 impl Triangle {
 
-    // pub fn any_side_zero(sides: [u64; 3]) -> bool {
-    //     sides.iter().any(|&s| s == 0)
+    // pub fn any_side_zero(&self) -> bool {
+    //     if self.sides.iter().any(|&s| s == 0) {
+    //         return true
+    //     }
+    //     false
     // }
 
-    // pub fn triangle_inequality(sides: [u64; 3]) -> bool {
-    //     sides.iter().max().unwrap() 
-    //     < 
-    //     sides.iter().fold(&0u64, |s, &v| {s + v; s})
+    // pub fn triangle_inequality(&self) -> bool {
+    //     // let sides = self.sides;
+    //     if self.sides.iter().max().unwrap() < 
+    //        self.sides.iter().fold(&0u64, |s, &v| {s + v; s})
+    //        { return true }
+    //     false
     // }
-
-    pub fn distinct_sides(&self) -> usize {
-        self.sides
-            .iter()
-            .cloned()
-            .collect::<HashSet<u64>>()
-            .len()
-    }
 
     pub fn build(sides: [u64; 3]) -> Option<Triangle> {
-        let triangle_inequality : bool = 
-            sides.iter().max().unwrap() < 
-            sides.iter().fold(&0u64, |s, &v| {(*s + &v); s});
-            // &sides.iter().sum::<u64>();
-        let any_side_zero : bool = 
-            sides.iter().any(|&s| s == 0);
+        let triangle_inequality: bool =
+            2u64 * sides.iter().max().unwrap() < 
+            sides.iter().sum::<u64>();
+        let any_side_zero: bool=
+            sides.iter().any(|s| *s == 0);
 
         if !triangle_inequality || any_side_zero {
             return None;
         }
-        Some(Triangle {sides} )
+        Some(Triangle {sides: sides} )
+    }
+
+    pub fn distinct_sides(&self) -> u32 {
+        let sides = 
+            self.sides.iter().copied()
+                .collect::<HashSet<u64>>();
+        sides.len() as u32
     }
 
     pub fn is_equilateral(&self) -> bool {
-        return &self.distinct_sides() == &1usize; 
-    }
-
-    pub fn is_scalene(&self) -> bool {
-        return &self.distinct_sides() == &2usize;
+        self.distinct_sides() == 1u32 
     }
 
     pub fn is_isosceles(&self) -> bool {
-        return &self.distinct_sides() == &3usize
+        self.distinct_sides() <= 2u32
+    }
+
+    pub fn is_scalene(&self) -> bool {
+        self.distinct_sides() == 3u32
     }
 }
