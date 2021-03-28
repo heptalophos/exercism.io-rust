@@ -31,3 +31,39 @@ running 0 tests
 
 test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
 
+
+
+
+>cargo test
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+
+
+running 17 tests
+test isosceles_triangles_have_two_equal_sides_four ... ok
+test isosceles_triangles_have_two_equal_sides_one ... ok
+test equilateral_triangles_have_equal_sides ... ok
+test isosceles_triangles_have_two_equal_sides_three ... ok
+test isosceles_triangles_have_two_equal_sides_two ... ok
+test larger_equilateral_triangles_have_equal_sides ... ok
+test one_length_zero_side_first ... ok
+test one_length_zero_side_second ... ok
+test one_length_zero_side_third ... ok
+test positive_length_sides_are_ok ... ok
+test scalene_triangle_has_no_equal_sides_four ... ok
+test scalene_triangle_has_no_equal_sides_one ... ok
+test scalene_triangle_has_no_equal_sides_three ... ok
+test scalene_triangle_has_no_equal_sides_two ... ok
+test sum_of_two_sides_must_equal_or_exceed_the_remaining_side_one ... ok
+test sum_of_two_sides_must_equal_or_exceed_the_remaining_side_two ... ok
+test zero_length_sides_are_illegal ... ok
+
+test result: ok. 17 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+
