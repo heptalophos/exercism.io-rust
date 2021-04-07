@@ -7,6 +7,6 @@ pub fn hamming_distance(s1: &str, s2: &str) -> Option<usize> {
         false => 
                 None,
         true  => 
-                Some(s1.len())
+                Some(s2.len())
     }
 }
