@@ -1,0 +1,29 @@
+cargo test
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+
+
+running 13 tests
+test test_complete_hamming_distance_in_small_strand ... ok
+test test_disallow_first_strand_longer ... ok
+test test_disallow_second_strand_longer ... ok
+test test_empty_strands ... ok
+test test_first_string_is_longer ... ok
+test test_larger_distance ... ok
+test test_long_different_strands ... ok
+test test_long_identical_strands ... ok
+test test_no_difference_between_identical_strands ... ok
+test test_second_string_is_longer ... ok
+test test_single_letter_different_strands ... ok
+test test_single_letter_identical_strands ... ok
+test test_small_hamming_distance_in_the_middle_somewhere ... ok
+
+test result: ok. 13 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+
