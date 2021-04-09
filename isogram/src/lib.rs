@@ -9,5 +9,5 @@ pub fn check(candidate: &str) -> bool {
              .filter(|x| x.is_alphabetic())
              .for_each(|x| *counts.entry(x).or_insert(0) += 1);
     
-    candidate.is_empty() || !counts.iter().any(|(_, c)| *c > 1)
+    !counts.iter().any(|(_, c)| *c > 1)
 }          
