@@ -1,3 +1,7 @@
+use std::collections::HashMap;
+
 pub fn check(candidate: &str) -> bool {
-    unimplemented!("Is {} an isogram?", candidate);
-}
+    
+    let mut counts: HashMap<char, u16> = HashMap::new();
+
+}         
