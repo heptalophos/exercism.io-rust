@@ -23,3 +23,31 @@ running 0 tests
 
 test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
 
+
+
+
+>cargo test
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+
+
+running 9 tests
+test duplicated_character_in_the_middle ... ok
+test empty_string ... ok
+test hypothetical_isogramic_word_with_hyphen ... ok
+test isogram_with_duplicated_hyphen ... ok
+test longest_reported_english_isogram ... ok
+test made_up_name_that_is_an_isogram ... ok
+test one_duplicated_character_mixed_case ... ok
+test only_lower_case_characters ... ok
+test one_duplicated_character ... ok
+
+test result: ok. 9 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+

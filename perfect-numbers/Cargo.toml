@@ -1,6 +1,6 @@
 [package]
 edition = "2018"
-name = "prime_factors"
+name = "perfect_numbers"
 version = "1.1.0"
 authors = ["heptalophos"]
 
