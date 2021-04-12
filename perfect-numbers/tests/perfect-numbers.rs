@@ -25,6 +25,7 @@ fn basic() {
 
 tests! {
     test_classification {
+        
         test_1(1, Classification::Deficient);
         test_2(2, Classification::Deficient);
         test_4(4, Classification::Deficient);
