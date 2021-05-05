@@ -9,9 +9,9 @@ pub fn brackets_are_balanced(string: &str) -> bool {
             '(' => stack.push(')'),
             '}' | ']' | ')' => { 
                 let p = stack.pop();
-                if p == None ||
-                   p.unwrap() != ch
-                    { return false }
+                if p == None || p.unwrap() != ch { 
+                    return false 
+                }
             }, 
              _  => (),
         }
