@@ -1,14 +1,26 @@
-pub fn find(array: &[i32], key: i32) -> Option<usize> {
-    
-    let haystaq = array.as_ref();
-    let mut min = 0;
-    let mut max = haystaq.len();
+pub fn find<H, N>(array: H, key: N) -> Option<usize> 
+where H: AsRef<[N]>, N: Ord {
+    use std::cmp::Ordering;
 
-    while min < max {
-        let mid = min / 2 + max / 2;
-        if key < haystaq[mid] { max = mid }
-        else if key > haystaq[mid] { min = mid + 1 }
-        else { return Some(mid) }
+    let haystaq = array.as_ref();
+    let (mut min, mut max) = (0, haystaq.len());
+
+    while min <= max {
+        
+        if min > max { return None }
+        
+        let mid = (min + max) / 2;
+        let needle = key.cmp(haystaq.get(mid)?);
+        
+        match needle {
+            Ordering::Less => {
+                if mid > 0 { max = mid - 1 }
+                else { return None }
+            },
+            Ordering::Greater => min = mid + 1,
+            Ordering::Equal => return Some(mid)
+        }
     }
+    
     None
 }
