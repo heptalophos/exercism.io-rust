@@ -28,3 +28,39 @@ running 0 tests
 
 test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
 
+
+
+
+>cargo test --all-features
+
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+
+
+running 16 tests
+test a_value_smaller_than_the_arrays_smallest_value_is_not_included ... ok
+test a_value_larger_than_the_arrays_largest_value_is_not_included ... ok
+test finds_a_value_at_the_beginning_of_an_array ... ok
+test finds_a_value_at_the_end_of_an_array ... ok
+test finds_a_value_in_an_array_of_even_length ... ok
+test finds_a_value_in_an_array_of_odd_length ... ok
+test finds_a_value_in_the_middle_of_an_array ... ok
+test finds_a_value_in_an_array_with_one_element ... ok
+test finds_first_value_in_an_array_with_two_element ... ok
+test finds_second_value_in_an_array_with_two_element ... ok
+test identifies_that_a_value_is_not_included_in_the_array ... ok
+test nothing_is_found_when_the_left_and_right_bounds_cross ... ok
+test nothing_is_included_in_an_empty_array ... ok
+test works_for_arrays ... ok
+test works_for_str_elements ... ok
+test works_for_vec ... ok
+
+test result: ok. 16 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+
