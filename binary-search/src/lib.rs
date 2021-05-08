@@ -1,9 +1,10 @@
 pub fn find<H, N>(array: H, key: N) -> Option<usize> 
 where H: AsRef<[N]>, N: Ord {
-    use std::cmp::Ordering;
+    use std::cmp::Ordering::{Less, Equal, Greater};
 
     let haystaq = array.as_ref();
-    let (mut min, mut max) = (0, haystaq.len());
+    let mut min = 0;
+    let mut max = haystaq.len();
 
     while min <= max {
         
@@ -13,12 +14,12 @@ where H: AsRef<[N]>, N: Ord {
         let needle = key.cmp(haystaq.get(mid)?);
         
         match needle {
-            Ordering::Less => {
+            Less => {
                 if mid > 0 { max = mid - 1 }
                 else { return None }
             },
-            Ordering::Greater => min = mid + 1,
-            Ordering::Equal => return Some(mid)
+            Greater => min = mid + 1,
+            Equal => return Some(mid)
         }
     }
     
