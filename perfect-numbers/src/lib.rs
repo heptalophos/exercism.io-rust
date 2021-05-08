@@ -15,14 +15,14 @@ pub fn classify(num: u64) -> Option<Classification> {
         .fold(0, |sum, i| sum + i);
 
     if num != 0 {
-        match aliquot.cmp(&num) {
+        return match aliquot.cmp(&num) {
             Ordering::Greater => 
-                return Some(Classification::Abundant),
+                Some(Classification::Abundant),
             Ordering::Equal => 
-                return  Some(Classification::Perfect),
+                Some(Classification::Perfect),
             Ordering::Less => 
-                return Some(Classification::Deficient)
+                Some(Classification::Deficient)
         }
     } 
-    return None
+    None
 }
