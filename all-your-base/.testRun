@@ -1,0 +1,34 @@
+>cargo test
+
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+
+
+running 17 tests
+test decimal_to_binary ... ok
+test binary_to_single_decimal ... ok
+test empty_list ... ok
+test binary_to_multiple_decimal ... ok
+test hexadecimal_to_trinary ... ok
+test input_base_is_one ... ok
+test input_base_is_zero ... ok
+test fifteen_bit_integer ... ok
+test invalid_positive_digit ... ok
+test leading_zeros ... ok
+test output_base_is_one ... ok
+test multiple_zeros ... ok
+test output_base_is_zero ... ok
+test single_bit_one_to_decimal ... ok
+test single_decimal_to_binary ... ok
+test single_zero ... ok
+test trinary_to_hexadecimal ... ok
+
+test result: ok. 17 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+
