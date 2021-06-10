@@ -1,0 +1,39 @@
+>cargo test
+
+    Running target\debug\deps\isbn_verifier-bbb73fed8e66bab5.exe
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+
+    Running target\debug\deps\isbn_verifier-6c39335555e0437b.exe
+    
+running 19 tests
+test empty_isbn ... ok
+test input_is_9_characters ... ok
+test invalid_characters_are_not_ignored ... ok
+test test_invalid_character_in_isbn ... ok
+test test_invalid_character_as_check_digit ... ok
+test test_invalid_check_digit ... ok
+test test_invalid_isbn_with_check_digit_X_instead_of_0 ... ok
+test test_invalid_isbn_with_invalid_X ... ok
+test test_invalid_isbn_without_check_digit ... ok
+test test_invalid_isbn_without_dashes_and_no_check_digit ... ok
+test test_invalid_isbn_without_dashes_and_too_long ... ok
+test test_special_characters ... ok
+test test_valid ... ok
+test test_valid_check_digit_of_10 ... ok
+test test_valid_digits_invalid_length ... ok
+test test_valid_isbn_without_dashes ... ok
+test test_valid_isbn_without_dashes_and_X_as_check ... ok
+test too_long_but_contains_a_valid_isbn ... ok
+test too_short_isbn ... ok
+
+test result: ok. 19 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+
+    Doc-tests isbn-verifier
+    
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+
