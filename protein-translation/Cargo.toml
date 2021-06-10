@@ -2,3 +2,4 @@
 edition = "2018"
 name = "protein-translation"
 version = "0.1.0"
+authors = ["heptalophos"]
