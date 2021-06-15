@@ -10,17 +10,17 @@ pub fn is_valid_isbn(isbn: &str) -> bool {
         .enumerate()
         .map(|(idx, c)| match (idx, c) {
                 (9, 'X') => Ok(10),
-                (_, 'X') => Err("invalid X"),
+                (_, 'X') => Err("invalid X position"),
                 (_,  d)  => d.to_string()
-                             .parse::<usize>()
-                             .or(Err("digit err")),
+                             .parse::<u32>()
+                             .or(Err("digit error")),
         })
         .collect::<Result<Vec<_>, _>>()
         .map(|d| {
            d.iter().enumerate()
-            .fold(0usize, 
+            .fold(0u32, 
                   |acc, (i, n)| 
-                  acc + n * (10 - i)) % 11 == 0 
+                  acc + n * (10 - i as u32)) % 11 == 0 
         })
         .unwrap_or(false)
 }
