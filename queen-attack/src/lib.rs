@@ -15,7 +15,7 @@ impl ChessPosition {
             (x, y) if (0..=7).contains(&x) && 
                       (0..=7).contains(&y) => 
                 Some(Self {rank, file}),
-            _ => 
+            (_, _) => 
                 None,
         }
     }
