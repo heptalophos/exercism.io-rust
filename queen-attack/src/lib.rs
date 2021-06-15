@@ -1,31 +1,41 @@
 #[derive(Debug)]
-pub struct ChessPosition;
+pub struct ChessPosition{
+    rank: i8,
+    file: i8,
+}
 
 #[derive(Debug)]
-pub struct Queen;
+pub struct Queen {
+    position: ChessPosition 
+}
 
 impl ChessPosition {
-    pub fn new(rank: i32, file: i32) -> Option<Self> {
-        unimplemented!(
-            "Construct a ChessPosition struct, given the following rank, file: ({}, {}). If the position is invalid return None.",
-            rank,
-            file
-        );
+    pub fn new(rank: i8, file: i8) -> Option<Self> {
+        match (rank, file) {
+            (x, y) if (0..=7).contains(&x) && 
+                      (0..=7).contains(&y) => 
+                Some(Self {rank, file}),
+            _ => 
+                None,
+        }
     }
 }
 
 impl Queen {
     pub fn new(position: ChessPosition) -> Self {
-        unimplemented!(
-            "Given the chess position {:?}, construct a Queen struct.",
-            position
-        );
+        Self { position }
     }
 
     pub fn can_attack(&self, other: &Queen) -> bool {
-        unimplemented!(
-            "Determine if this Queen can attack the other Queen {:?}",
-            other
-        );
+        let delta_rank = 
+            i8::abs(self.position.rank - other.position.rank);
+        let delta_file = 
+            i8::abs(self.position.file - other.position.file);
+        match (delta_rank, delta_file) {
+            (0, 0) => panic!("Queens on same square"),
+            (0, _) => true,
+            (_, 0) => true,
+            (x, y) => x / y == 1
+        }
     }
 }
