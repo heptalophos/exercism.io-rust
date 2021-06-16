@@ -27,15 +27,15 @@ impl Queen {
     }
 
     pub fn can_attack(&self, other: &Queen) -> bool {
-        let delta_rank = 
+        let drank = 
             i8::abs(self.position.rank - other.position.rank);
-        let delta_file = 
+        let dfile = 
             i8::abs(self.position.file - other.position.file);
-        match (delta_rank, delta_file) {
-            (0, 0) => panic!("Queens on same square"),
+        match (drank, dfile) {
+            (0, 0) => panic!("This is MY square honey!"),
             (0, _) => true,
             (_, 0) => true,
-            (x, y) => x / y == 1
+            (x, y) => x == y
         }
     }
 }
