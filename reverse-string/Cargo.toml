@@ -7,3 +7,4 @@ grapheme = []
 edition = "2018"
 name = "reverse_string"
 version = "1.2.0"
+authors = ["heptalophos"]
