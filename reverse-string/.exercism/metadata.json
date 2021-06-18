@@ -1,1 +1,9 @@
-{"track":"rust","exercise":"reverse-string","id":"8578b3b2466d46929d054093387e282b","url":"https://exercism.io/my/solutions/8578b3b2466d46929d054093387e282b","handle":"heptalophos","is_requester":true,"auto_approve":false}
+{
+    "track": "rust",
+    "exercise": "reverse-string",
+    "id": "8578b3b2466d46929d054093387e282b",
+    "url": "https://exercism.io/tracks/rust/exercises/reverse-string/solutions/8578b3b2466d46929d054093387e282b",
+    "handle": "heptalophos",
+    "is_requester": true,
+    "auto_approve": false
+}
