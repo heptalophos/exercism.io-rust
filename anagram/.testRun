@@ -59,3 +59,39 @@ running 0 tests
 
 test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
 
+
+
+
+>cargo test
+
+    Running target\debug\deps\anagram-a616590788e690bd.exe
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+
+    Running target\debug\deps\anagram-2a33f5ea593cdbdb.exe
+
+running 13 tests
+test test_does_not_confuse_different_duplicates ... ok
+test test_detect_anagram ... ok
+test test_detect_simple_anagram ... ok
+test test_case_insensitive_anagrams ... ok
+test test_does_not_detect_a_differently_cased_word_as_its_own_anagram ... ok
+test test_does_not_detect_a_word_as_its_own_anagram ... ok
+test test_does_not_detect_a_differently_cased_unicode_word_as_its_own_anagram ... ok
+test test_eliminate_anagram_subsets ... ok
+test test_same_bytes_different_chars ... ok
+test test_no_matches ... ok
+test test_multiple_anagrams ... ok
+test test_misleading_unicode_anagrams ... ok
+test test_unicode_anagrams ... ok
+
+test result: ok. 13 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+
+    Doc-tests anagram
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+
