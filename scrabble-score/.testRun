@@ -1,0 +1,25 @@
+>cargo test
+
+
+running 12 tests
+test empty_words_are_worth_zero ... ok
+test f_is_worth_four ... ok
+test a_is_worth_one_point ... ok
+test all_letters_work ... ok
+test german_letters_do_not_score ... ok
+test longer_words_with_valuable_letters ... ok
+test long_mixed_case_word ... ok
+test medium_word ... ok
+test scoring_is_case_insensitive ... ok
+test three_letter_word ... ok
+test non_english_scrabble_letters_do_not_score ... ok
+test two_one_point_letters_make_a_two_point_word ... ok
+
+test result: ok. 12 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+
+    Doc-tests scrabble-score
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+
