@@ -19,7 +19,7 @@ impl School {
     pub fn grades(&self) -> Vec<u8> {
         let mut grades: Vec<u8> = 
             self.roster.keys().copied()
-                .collect::<Vec<u8>>();
+                .collect::<Vec<_>>();
         grades.sort_unstable();
         grades
     }
