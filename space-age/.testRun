@@ -1,0 +1,24 @@
+>cargo test
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+
+running 8 tests
+test mercury_age ... ok
+test jupiter_age ... ok
+test mars_age ... ok
+test earth_age ... ok
+test saturn_age ... ok
+test neptune_age ... ok
+test uranus_age ... ok
+test venus_age ... ok
+
+test result: ok. 8 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+
+    Doc-tests space-age
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+
