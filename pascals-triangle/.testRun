@@ -1,0 +1,27 @@
+>cargo test -- --ignored
+
+    Running target\debug\deps\pascals_triangle-825796983c7cfe54.exe
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+
+    Running target\debug\deps\pascals_triangle-ee29b6d884704845.exe
+
+running 8 tests
+test last_of_four_rows ... ok
+test five_rows ... ok
+test one_row ... ok
+test seven_rows ... ok
+test six_rows ... ok
+test ten_rows ... ok
+test three_rows ... ok
+test two_rows ... ok
+
+test result: ok. 8 passed; 0 failed; 0 ignored; 0 measured; 1 filtered out
+
+    Doc-tests pascals-triangle
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
