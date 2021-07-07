@@ -1,1 +1,9 @@
-{"track":"rust","exercise":"beer-song","id":"3a082b0fbb254528bc2409e6112e712f","url":"https://exercism.io/my/solutions/3a082b0fbb254528bc2409e6112e712f","handle":"heptalophos","is_requester":true,"auto_approve":false}
+{
+    "track": "rust",
+    "exercise": "beer-song",
+    "id": "3a082b0fbb254528bc2409e6112e712f",
+    "url": "https://exercism.io/tracks/rust/exercises/beer-song/solutions/3a082b0fbb254528bc2409e6112e712f",
+    "handle": "heptalophos",
+    "is_requester": true,
+    "auto_approve": false
+}
