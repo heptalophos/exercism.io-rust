@@ -24,3 +24,34 @@ running 0 tests
 test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
 
 Finished test [unoptimized + debuginfo] target(s) in 32.70s
+
+
+
+>cargo test
+
+Finished test [unoptimized + debuginfo] target(s) in 0.08s
+
+        Running target\debug\deps\beer_song-9e3d51df89a18cbd.exe
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+
+        Running target\debug\deps\beer_song-c57fa5c969399f17.exe
+
+running 6 tests
+test test_song_3_0 ... ignored
+test test_song_8_6 ... ignored
+test test_verse_1 ... ignored
+test test_verse_2 ... ignored
+test test_verse_8 ... ignored
+test test_verse_0 ... ok
+
+test result: ok. 1 passed; 0 failed; 5 ignored; 0 measured; 0 filtered out
+
+       Doc-tests beer-song
+       
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+
