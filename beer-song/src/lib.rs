@@ -1,12 +1,15 @@
 pub fn verse(n: u32) -> String {
-    format!("{}\n{}\n", premise(n), conclusion(n))
+    format!("{p}\n{c}\n", 
+            p = premise(n), 
+            c = conclusion(n))
 }
 
 pub fn sing(start: u32, end: u32) -> String {
     if start == end { 
         return verse(end) 
     } 
-    format!("{}\n{}", verse(start), 
+    format!("{0}\n{1}", 
+            verse(start), 
             sing(start - 1, end).as_str())
 }
 
@@ -19,9 +22,9 @@ fn premise(bottles: u32) -> String {
         1 => format!("{0} {1}", 
                      "1 bottle of beer on the wall,", 
                      "1 bottle of beer."),
-        _ => format!("{b} {bbws}, {b} {bbs}", 
+        _ => format!("{b} {bbsw}, {b} {bbs}", 
                      b = bottles, bbs = "bottles of beer.",
-                     bbws = "bottles of beer on the wall")
+                     bbsw = "bottles of beer on the wall")
     }
 }
 
@@ -33,10 +36,10 @@ fn conclusion(bottles: u32) -> String {
         1 => format!("{0} {1}", 
                      "Take it down and pass it around,", 
                      "no more bottles of beer on the wall."),
-        _ => format!("{0}, {1} bottle{2} {3}",
+        _ => format!("{0}, {b} bottle{s} {1}",
                      "Take one down and pass it around",
-                     bottles - 1, 
-                     if bottles != 2 { "s" } else { "" }, 
-                     "of beer on the wall.")
+                     "of beer on the wall.",
+                     b = bottles - 1, 
+                     s = if bottles != 2 { "s" } else { "" })
     }
 }
