@@ -20,3 +20,33 @@ running 0 tests
 
 test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
 
+
+
+>cargo test
+
+Finished test [unoptimized + debuginfo] target(s) in 0.35s
+
+    Running target\debug\deps\proverb-b90774a1bace1021.exe
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+
+    Running target\debug\deps\proverb-42a9d48d372ca3f6.exe
+
+running 6 tests
+test test_three_pieces ... ok
+test test_three_pieces_modernized ... ok
+test test_full ... ok
+test test_one_piece ... ok
+test test_zero_pieces ... ok
+test test_two_pieces ... ok
+
+test result: ok. 6 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+
+    Doc-tests proverb
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+
