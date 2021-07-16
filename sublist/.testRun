@@ -37,3 +37,45 @@ running 0 tests
 
 test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
 
+
+
+
+>cargo test
+
+Finished test [unoptimized + debuginfo] target(s) in 0.43s
+     
+    Running target\debug\deps\sublist-a35bec49490d01e4.exe
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+
+    Running target\debug\deps\sublist-442ee5a70ea68fe4.exe
+
+running 17 tests
+test partially_matching_sublist_at_start ... ok
+test empty_equals_empty ... ok
+test recurring_values_sublist ... ok
+test recurring_values_unequal ... ok
+test sublist_at_end ... ok
+test sublist_in_middle ... ok
+test superlist_at_end ... ok
+test superlist_at_start ... ok
+test superlist_in_middle ... ok
+test test_1_is_not_2 ... ok
+test test_anything_is_a_superlist_of_empty ... ok
+test test_compare_larger_equal_lists ... ok
+test test_empty_is_a_sublist_of_anything ... ok
+test sublist_early_in_huge_list ... ok
+test test_sublist_at_start ... ok
+test superlist_early_in_huge_list ... ok
+test huge_sublist_not_in_huge_list ... ok
+
+test result: ok. 17 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+
+    Doc-tests sublist
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+
