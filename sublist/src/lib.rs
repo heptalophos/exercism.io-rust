@@ -8,7 +8,8 @@ pub enum Comparison {
     Unequal,
 }
 
-pub fn sublist<T: PartialEq>(first_list: &[T], second_list: &[T]) -> Comparison {
+pub fn sublist<T: PartialEq>(first_list: &[T], 
+                            second_list: &[T]) -> Comparison {
     use Comparison::*;
     match first_list.len().cmp(&second_list.len()) {
         Ordering::Equal 
@@ -22,7 +23,7 @@ pub fn sublist<T: PartialEq>(first_list: &[T], second_list: &[T]) -> Comparison 
 }
 
 fn contained<T: PartialEq>(alist: &[T], blist: &[T]) -> bool {
-    alist.is_empty() ||
+    alist.is_empty() || 
     blist.windows(alist.len())
          .any(|window| window == alist)
 }
