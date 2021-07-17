@@ -4,9 +4,9 @@ pub struct PascalsTriangle {
 
 impl PascalsTriangle {
     pub fn new(row_count: u32) -> Self {
-        let mut ptriangle = PascalsTriangle {
-            rows: Vec::new()
-        };
+        let mut ptriangle = 
+            PascalsTriangle { rows: Vec::new() };
+
         for n in 0..row_count {
             let mut row = Vec::new();
             for k in 0..(n + 1) {
@@ -23,7 +23,7 @@ impl PascalsTriangle {
 }
 
 fn binomial(n: u32, k: u32) -> u32 {
-    if k > n { return 0 } 
-    if k == 0 || k == n { return 1 }
-    binomial(n - 1, k - 1) + binomial(n - 1, k) 
+    if k > n { return 0; }
+    if k == 0 || k == n { return 1; }
+    binomial(n - 1, k - 1) + binomial(n - 1, k)
 }
