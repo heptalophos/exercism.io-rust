@@ -4,3 +4,7 @@ pub fn translate(input: &str) -> String {
         input
     );
 }
+
+fn piglatinize(word: &str) -> String -> {
+    let mut 
+}
