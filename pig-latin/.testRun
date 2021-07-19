@@ -1,0 +1,42 @@
+>cargo test
+
+    Running target\debug\deps\pig_latin-a3d3def9bf7a6fb0.exe
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+
+    Running target\debug\deps\pig_latin-a882d0103aa915da.exe
+
+running 21 tests
+test test_word_beginning_with_a ... ok
+test test_a_whole_phrase ... ok
+test test_word_beginning_with_a_vowel_and_followed_by_a_qu ... ok
+test test_word_beginning_with_ch ... ok
+test test_word_beginning_with_e ... ok
+test test_word_beginning_with_i ... ok
+test test_word_beginning_with_k ... ok
+test test_word_beginning_with_o ... ok
+test test_word_beginning_with_p ... ok
+test test_word_beginning_with_q_without_a_following_u ... ok
+test test_word_beginning_with_qu ... ok
+test test_word_beginning_with_qu_and_a_preceding_consonant ... ok
+test test_word_beginning_with_sch ... ok
+test test_word_beginning_with_th ... ok
+test test_word_beginning_with_thr ... ok
+test test_word_beginning_with_u ... ok
+test test_word_beginning_with_x ... ok
+test test_word_beginning_with_xr ... ok
+test test_word_beginning_with_y ... ok
+test test_word_beginning_with_yt ... ok
+test test_y_is_treated_like_a_vowel_at_the_end_of_a_consonant_cluster ... ok
+
+test result: ok. 21 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+
+    Doc-tests pig-latin
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+
+Finished test [unoptimized + debuginfo] target(s) in 0.03s
