@@ -25,5 +25,6 @@ pub fn sublist<T: PartialEq>(first_list: &[T],
 fn contained<T: PartialEq>(alist: &[T], blist: &[T]) -> bool {
     alist.is_empty() || 
     blist.windows(alist.len())
-         .any(|window| window == alist)
+         .find(|window| window == &alist)
+         .is_some()
 }
