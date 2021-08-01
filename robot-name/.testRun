@@ -1,0 +1,28 @@
+>cargo test
+
+Finished test [unoptimized + debuginfo] target(s) in 0.06s
+
+    Running target\debug\deps\robot_name-9cf99830179e7daa.exe
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+
+    Running target\debug\deps\robot_name-40e17bae4836edaa.exe
+
+running 6 tests
+test test_different_robots_have_different_names ... ok
+test test_name_should_match_expected_pattern ... ok
+test test_name_is_persistent ... ok
+test test_new_name_is_different_from_old_name ... ok
+test test_new_name_is_persistent ... ok
+test test_new_name_should_match_expected_pattern ... ok
+
+test result: ok. 6 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+
+    Doc-tests robot-name
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+
