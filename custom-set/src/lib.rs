@@ -24,9 +24,6 @@ impl<T: PartialEq + Clone> CustomSet<T> {
     }
 
     pub fn is_subset(&self, other: &Self) -> bool {
-        if self.set.is_empty() || self.set == other.set {
-            return true;
-        }
         self.set.iter()
                 .all(|e| other.set.contains(e))
     }
