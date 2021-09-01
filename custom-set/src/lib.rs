@@ -1,30 +1,35 @@
-#[derive(Debug, PartialEq)]
+#[derive(Debug)]
 
 pub struct CustomSet<T: PartialEq + Clone> {
     set: Vec<T>
 }
 
 impl<T: PartialEq + Clone> CustomSet<T> {
-    pub fn new(elements: &Vec<T>) -> CustomSet<T> {
+    pub fn new(elements:  &[T]) -> CustomSet<T> {
         let mut set = CustomSet { set: vec![] };
         for elem in elements {
-            set.add(elem)
+            set.add(elem.clone())
         }
         set
     }
 
     pub fn contains(&self, element: &T) -> bool {
-        self.set.contains(&element)
+        self.set.as_slice()
+                .contains(&element)
     }
 
     pub fn add(&mut self, element: T) {
-        if !self.contains(&element) {
+        if !self.set.contains(&element) {
             self.set.push(element)
         }
     }
 
     pub fn is_subset(&self, other: &Self) -> bool {
-        self.set.iter().all(|e| other.contains(e))
+        if self.set.is_empty() || self.set == other.set {
+            return true;
+        }
+        self.set.iter()
+                .all(|e| other.set.as_slice().contains(e))
     }
 
     pub fn is_empty(&self) -> bool {
@@ -32,22 +37,42 @@ impl<T: PartialEq + Clone> CustomSet<T> {
     }
 
     pub fn is_disjoint(&self, other: &Self) -> bool {
-        unimplemented!();
+        !self.set.iter().any(|e| other.contains(e))
     }
 
     pub fn intersection(&self, other: &Self) -> Self {
-        let mut common = Self::new(&vec![]);
+        let mut common = Self::new(&[]);
         for e in self.set.iter().cloned() {
-            if other.contains(&e) { common.add(e) }
+            if other.contains(&e) { 
+                common.add(e) 
+            }
         }
         common
     }
 
-    pub fn difference(&self, _other: &Self) -> Self {
-        unimplemented!();
+    pub fn difference(&self, other: &Self) -> Self {
+        let mut diff = Self::new(&[]);
+        for e in self.set.iter().cloned() {
+            if !other.contains(&e) { 
+                diff.add(e) 
+            }
+        }
+        diff
     }
 
-    pub fn union(&self, _other: &Self) -> Self {
-        unimplemented!();
+    pub fn union(&self, other: &Self) -> Self {
+        let mut union = Self::new(&[]);
+        for e in self.set.iter()
+                         .chain(other.set.iter())
+                         .cloned() {
+            union.add(e);
+        }
+        union
+    }
+}
+
+impl<T: Clone> PartialEq for CustomSet<T> where T: PartialEq {
+    fn eq(&self, other: &CustomSet<T>) -> bool {
+       self.is_subset(other) && other.is_subset(self)
     }
 }
