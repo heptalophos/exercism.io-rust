@@ -5,8 +5,8 @@ pub struct CustomSet<T: PartialEq + Clone> {
 }
 
 impl<T: PartialEq + Clone> CustomSet<T> {
-    pub fn new(elements: Vec<T>) -> Self {
-        let mut set = CustomSet {set: vec![]};
+    pub fn new(elements: &Vec<T>) -> CustomSet<T> {
+        let mut set = CustomSet { set: vec![] };
         for elem in elements {
             set.add(elem)
         }
@@ -14,7 +14,7 @@ impl<T: PartialEq + Clone> CustomSet<T> {
     }
 
     pub fn contains(&self, element: &T) -> bool {
-        self.set.contains(element)
+        self.set.contains(&element)
     }
 
     pub fn add(&mut self, element: T) {
@@ -31,12 +31,16 @@ impl<T: PartialEq + Clone> CustomSet<T> {
         self.set.is_empty()
     }
 
-    pub fn is_disjoint(&self, _other: &Self) -> bool {
+    pub fn is_disjoint(&self, other: &Self) -> bool {
         unimplemented!();
     }
 
-    pub fn intersection(&self, _other: &Self) -> Self {
-        unimplemented!();
+    pub fn intersection(&self, other: &Self) -> Self {
+        let mut common = Self::new(&vec![]);
+        for e in self.set.iter().cloned() {
+            if other.contains(&e) { common.add(e) }
+        }
+        common
     }
 
     pub fn difference(&self, _other: &Self) -> Self {
