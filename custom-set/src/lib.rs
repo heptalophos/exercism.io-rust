@@ -14,8 +14,7 @@ impl<T: PartialEq + Clone> CustomSet<T> {
     }
 
     pub fn contains(&self, element: &T) -> bool {
-        self.set.as_slice()
-                .contains(&element)
+        self.set.contains(&element)
     }
 
     pub fn add(&mut self, element: T) {
@@ -29,7 +28,7 @@ impl<T: PartialEq + Clone> CustomSet<T> {
             return true;
         }
         self.set.iter()
-                .all(|e| other.set.as_slice().contains(e))
+                .all(|e| other.set.contains(e))
     }
 
     pub fn is_empty(&self) -> bool {
