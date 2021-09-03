@@ -1,19 +1,22 @@
-#[derive(Debug, PartialEq, Eq)]
+#[derive(Debug, PartialEq, Eq, Clone)]
+
 pub struct Palindrome {
-    // implement your palindrome type here
+    x: u64,
+    y: u64
 }
 
 impl Palindrome {
     pub fn new(a: u64, b: u64) -> Palindrome {
-        unimplemented!("create a palindrome with factors ({}, {})", a, b)
+        Palindrome {a, b}
     }
 
     pub fn value(&self) -> u64 {
-        unimplemented!("return the value of this palindrome")
+        self.x * self.y
     }
 
     pub fn insert(&mut self, a: u64, b: u64) {
-        unimplemented!("insert new factors ({}, {}) into this palindrome", a, b)
+        self.x = a;
+        self.y = b;
     }
 }
 
