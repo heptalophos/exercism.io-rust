@@ -1,0 +1,27 @@
+>cargo test
+
+Finished test [unoptimized + debuginfo] target(s) in 0.03s
+
+    Running target\debug\deps\lucians_luscious_lasagna-35ce1a26b04e9eff.exe
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+
+    Running target\debug\deps\lucians_luscious_lasagna-a0599ad0e317bb90.exe
+
+running 6 tests
+test elapsed_time_in_minutes_for_multiple_layers ... ok
+test elapsed_time_in_minutes_for_one_layer ... ok
+test expected_minutes_in_oven_is_correct ... ok
+test preparation_time_in_minutes_for_multiple_layers ... ok
+test preparation_time_in_minutes_for_one_layer ... ok
+test remaining_minutes_in_oven_after_fifteen_minutes ... ok
+
+test result: ok. 6 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+
+    Doc-tests lucians-luscious-lasagna
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
