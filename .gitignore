@@ -12,5 +12,7 @@ cleanup.*
 /*/Cargo.lock
 /*/.asmCode
 
+HELP.md
+
 .fake
 .ionide

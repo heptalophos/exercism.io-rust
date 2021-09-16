@@ -6,7 +6,7 @@ pub fn count(nucleotide: char, dna: &str) -> Result<usize, char> {
 
     if valid(nucleotide) != 0 {
         dna.chars().try_fold(0, |acc, n| {
-            match (valid(n), exact(nucleotide, n)) {
+            match (valid(n), exact(n, nucleotide)) {
                     (1, 1) => Ok(acc + 1),
                     (1, 0) => Ok(acc),
                     (_, _) => Err(n),
