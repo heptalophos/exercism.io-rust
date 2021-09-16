@@ -1,1 +1,9 @@
-{"track":"rust","exercise":"nucleotide-count","id":"dacb5b87bae242a4ab1de67b189dd267","url":"https://exercism.org/tracks/rust/exercises/nucleotide-count","handle":"heptalophos","is_requester":true,"auto_approve":false}
+{
+    "track": "rust",
+    "exercise": "nucleotide-count",
+    "id": "dacb5b87bae242a4ab1de67b189dd267",
+    "url": "https://exercism.org/tracks/rust/exercises/nucleotide-count/solutions/heptalophos",
+    "handle": "heptalophos",
+    "is_requester": true,
+    "auto_approve": false
+}
