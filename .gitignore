@@ -11,8 +11,8 @@ cleanup.*
 # More information here http://doc.crates.io/guide.html#cargotoml-vs-cargolock
 /*/Cargo.lock
 /*/.asmCode
-
 HELP.md
+HINTS.md
 
 .fake
 .ionide
