@@ -1,0 +1,32 @@
+>cargo test -- --include-ignored
+
+   Compiling assembly-line v0.1.0 (~\exercism\rust\assembly-line)
+    Finished test [unoptimized + debuginfo] target(s) in 10.99s
+     Running target\debug\deps\assembly_line-379de126bf933bf4.exe
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+
+     Running target\debug\deps\assembly_line-585fa97b4261d50a.exe
+
+running 10 tests
+test production_rate_per_hour_at_speed_nine ... ok
+test production_rate_per_hour_at_speed_four ... ok
+test production_rate_per_hour_at_speed_seven ... ok
+test production_rate_per_hour_at_speed_one ... ok
+test production_rate_per_hour_at_speed_zero ... ok
+test production_rate_per_minute_at_speed_eight ... ok
+test production_rate_per_minute_at_speed_one ... ok
+test production_rate_per_minute_at_speed_ten ... ok
+test production_rate_per_minute_at_speed_five ... ok
+test production_rate_per_minute_at_speed_zero ... ok
+
+test result: ok. 10 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+
+    Doc-tests assembly-line
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+
