@@ -38,24 +38,20 @@ pub enum Error {
 ///
 pub fn convert(number: &[u32], from_base: u32, to_base: u32) -> 
                                             Result<Vec<u32>, Error> {
-    
     if from_base <= 1 {
         return Err(Error::InvalidInputBase);
     } 
     if to_base <= 1 {
         return Err(Error::InvalidOutputBase);
     } 
-    if let Some(x) = number
-                     .iter()
-                     .find(|&&d| d >= from_base)
-                     .cloned() {
-        return Err(Error::InvalidDigit(x));
-    }
+    if let Some(x) = number.iter()
+                    .find(|&&d| d >= from_base)
+                    .cloned() {
+                        return Err(Error::InvalidDigit(x));
+                    }
 
     let mut from_form = number.iter()
-                        .fold(0, 
-                              |acc, d| 
-                              acc * from_base + *d);
+                        .fold(0, |acc, d| acc * from_base + *d);
 
     if from_form == 0 { return Ok(vec![0]); }
     
