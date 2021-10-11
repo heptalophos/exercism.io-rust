@@ -5,9 +5,7 @@ pub fn is_valid_isbn(isbn: &str) -> bool {
         return false
     }
 
-    isbn.replace("-", "")
-        .chars()
-        .enumerate()
+    isbn.replace("-", "").chars().enumerate()
         .map(|(idx, c)| match (idx, c) {
                 (9, 'X') => Ok(10),
                 (_, 'X') => Err("invalid X position"),
@@ -18,8 +16,7 @@ pub fn is_valid_isbn(isbn: &str) -> bool {
         .collect::<Result<Vec<_>, _>>()
         .map(|d| {
            d.iter().enumerate()
-            .fold(0u32, 
-                  |acc, (i, n)| 
+            .fold(0u32, |acc, (i, n)| 
                   acc + n * (10 - i as u32)) % 11 == 0 
         })
         .unwrap_or(false)
