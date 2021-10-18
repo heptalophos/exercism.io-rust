@@ -52,3 +52,37 @@ running 0 tests
 
 test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
 
+
+
+>cargo test
+
+   Compiling pangram v0.0.0 (~\exercism\rust\pangram)
+    Finished test [unoptimized + debuginfo] target(s) in 28.00s
+     Running target\debug\deps\pangram-bce70ce5fb1b8a15.exe
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+
+     Running target\debug\deps\pangram-a746a2301a1cb831.exe
+
+running 10 tests
+test capitals_and_punctuation_can_be_in_pangrams ... ok
+test classic_pangram_is_a_pangram ... ok
+test empty_strings_are_not_pangrams ... ok
+test non_ascii_characters_can_be_in_pangrams ... ok
+test numbers_can_not_replace_letters ... ok
+test numbers_do_not_affect_pangrams ... ok
+test pangrams_must_have_all_letters ... ok
+test pangrams_must_have_all_letters_two ... ok
+test pangrams_must_include_z ... ok
+test underscores_do_not_affect_pangrams ... ok
+
+test result: ok. 10 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+
+   Doc-tests pangram
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+
