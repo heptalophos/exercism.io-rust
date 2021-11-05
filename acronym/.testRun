@@ -26,3 +26,37 @@ running 0 tests
 
 test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
 
+
+
+>cargo test
+
+	Finished test [unoptimized + debuginfo] target(s) in 0.04s
+	 Running target\debug\deps\acronym-341ccd0a68ff34b9.exe
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+
+	 Running target\debug\deps\acronym-1d26bb5b85f0e1d0.exe
+
+running 12 tests
+test apostrophes ... ok
+test all_caps_word_with_punctuation ... ok
+test all_caps_word ... ok
+test basic ... ok
+test consecutive_delimiters ... ok
+test camelcase ... ok
+test lowercase_words ... ok
+test empty ... ok
+test punctuation_without_whitespace ... ok
+test underscore_emphasis ... ok
+test very_long_abbreviation ... ok
+test punctuation ... ok
+
+test result: ok. 12 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+
+	Doc-tests acronym
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
