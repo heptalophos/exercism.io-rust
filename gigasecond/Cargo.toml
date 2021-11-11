@@ -1,5 +1,5 @@
 [package]
-edition = "2021"
+edition = "2018"
 name = "gigasecond"
 version = "2.0.0"
 authors = ["heptalophos"]
