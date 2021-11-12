@@ -24,45 +24,28 @@ test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
 
 >cargo test
 
+   Compiling gigasecond v2.0.0 (C:\Users\Chris\exercism\rust\gigasecond)
+    Finished test [unoptimized + debuginfo] target(s) in 10.45s
+     Running unittests (target\debug\deps\gigasecond-798ad47cb77635f7.exe)
+
 running 0 tests
 
-test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
 
+     Running tests\gigasecond.rs (target\debug\deps\gigasecond-61e4e1a4528195dc.exe)
 
 running 5 tests
-test test_another_date ... ok
-test test_another_datetime ... ok
 test test_date ... ok
-test test_datetime ... ok
-test test_third_date ... ok
-
-test result: ok. 5 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
-
-
-running 0 tests
-
-test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
-
-
-
->cargo test
-
-running 0 tests
-
-test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
-
-
-running 5 tests
 test test_another_datetime ... ok
-test test_date ... ok
 test test_datetime ... ok
 test test_another_date ... ok
 test test_third_date ... ok
 
-test result: ok. 5 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+test result: ok. 5 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
 
+   Doc-tests gigasecond
 
 running 0 tests
 
-test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
 
