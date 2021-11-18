@@ -2,3 +2,4 @@
 edition = "2018"
 name = "isbn-verifier"
 version = "2.7.0"
+authors = ["heptalophos"]
