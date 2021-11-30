@@ -4,10 +4,12 @@ pub fn collatz(n: u64) -> Option<u64> {
     let mut n = n;
     while n > 1 {
         match n % 2 == 0 {
-            true => n /= 2,
-            false => { n *= 3; n += 1 } 
+            true  => n /= 2,
+            false => 
+                n = n.checked_mul(3)?.checked_add(1)?
         }
         steps += 1
     } 
     Some(steps)
 }
+
