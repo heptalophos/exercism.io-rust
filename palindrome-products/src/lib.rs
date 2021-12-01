@@ -22,19 +22,28 @@ pub fn palindrome_products(min: u64, max: u64) -> Option<(Palindrome, Palindrome
     if min > max {
         return None;
     }
-    let mut pmin = None;
-    let mut pmax = None;
-    for i in (min..=max).into_iter() {
-        for j in (i..=max).into_iter() {
-            let digits = format!("{}", Palindrome::new(i, j).value());
-            if digits.chars().eq(digits.chars().rev()) {
-                pmin = pmin.filter(|p: &Palindrome| p.value() < (i * j))
-                           .or_else(|| Some(Palindrome::new(i, j)));
-                pmax = pmax.filter(|p: &Palindrome| p.value() > (i * j))
-                           .or_else(|| Some(Palindrome::new(i, j)));
+    let mut pmin = Palindrome::new(max, max);
+    let mut pmax = Palindrome::new(min, min);
+    let mut found = 0;
+    for i in min..=max {
+        for j in i..=max {
+            let product = Palindrome::new(i, j).value();
+            let digits = format!("{}", product);
+            if product <= pmin.value() {
+                if digits.chars().eq(digits.chars().rev()) {
+                    pmin.insert(i, j);
+                    found += 1;
+                }
+            }
+            if product >= pmax.value() {
+                if digits.chars().eq(digits.chars().rev()) {
+                    pmax.insert(i, j); 
+                    found += 1;
+                }
             }
         }
     }
-    if pmin.is_none() { None }
-    else { Some((pmin.unwrap(), pmax.unwrap())) }
+    // println!("Palindromes found: {}", found);
+    if found == 0 { None }
+    else { Some((pmin, pmax)) }
 }
