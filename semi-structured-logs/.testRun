@@ -1,0 +1,26 @@
+>cargo test
+
+    Finished test [unoptimized + debuginfo] target(s) in 0.03s
+     Running unittests (target\debug\deps\semi_structured_logs-7d94c044ee4de2d5.exe)
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running tests\semi-structured-logs.rs (target\debug\deps\semi_structured_logs-8188ff9f530dda13.exe)
+
+running 6 tests
+test emits_info ... ok
+test emits_error ... ok
+test emits_warning ... ok
+test log_emits_error ... ok
+test log_emits_info ... ok
+test log_emits_warning ... ok
+
+test result: ok. 6 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+   Doc-tests semi_structured_logs
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
