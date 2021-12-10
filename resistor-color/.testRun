@@ -1,0 +1,29 @@
+>cargo test
+
+   Compiling resistor-color v1.0.0 (~\exercism\rust\resistor-color)
+    Finished test [unoptimized + debuginfo] target(s) in 3.71s
+     Running unittests (target\debug\deps\resistor_color-48aec816fc5a7cdc.exe)
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running tests\resistor-color.rs (target\debug\deps\resistor_color-347811aecc79aea6.exe)
+
+running 8 tests
+test test_2 ... ok
+test test_11_out_of_range ... ok
+test test_6 ... ok
+test test_8 ... ok
+test test_all_colors ... ok
+test test_black ... ok
+test test_orange ... ok
+test test_white ... ok
+
+test result: ok. 8 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+   Doc-tests resistor-color
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
