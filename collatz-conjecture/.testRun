@@ -29,9 +29,10 @@ test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
 
 
 
->cargo test -- --include-ignored
+>cargo test
 
-    Finished test [unoptimized + debuginfo] target(s) in 0.03s
+  Compiling collatz_conjecture v1.2.1 (~\exercism\rust\collatz-conjecture)
+    Finished test [unoptimized + debuginfo] target(s) in 4.04s
      Running unittests (target\debug\deps\collatz_conjecture-c4eb60bebb3fb70e.exe)
 
 running 0 tests
@@ -41,19 +42,19 @@ test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; fini
      Running tests\collatz-conjecture.rs (target\debug\deps\collatz_conjecture-11d33287dc666e9f.exe)
 
 running 8 tests
-test test_1 ... ok
 test test_0 ... ok
+test test_110243094271 ... ignored
+test test_1 ... ok
 test test_1000000 ... ok
-test test_110243094271 ... ok
 test test_12 ... ok
+test test_max_div_3 ... ignored
 test test_16 ... ok
-test test_max_div_3 ... ok
-test test_max_minus_1 ... ok
+test test_max_minus_1 ... ignored
 
-test result: ok. 8 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+test result: ok. 5 passed; 0 failed; 3 ignored; 0 measured; 0 filtered out; finished in 0.00s
 
    Doc-tests collatz_conjecture
-   
+
 running 0 tests
 
 test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
