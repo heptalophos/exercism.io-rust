@@ -1,0 +1,37 @@
+>cargo test
+
+  Compiling low_power_embedded_game v0.1.0 (~\exercism\rust\low-power-embedded-game)
+    Finished test [unoptimized + debuginfo] target(s) in 0.03s
+     Running unittests (target\debug\deps\low_power_embedded_game-fc17afc8ca57a373.exe)
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running tests\low-power-embedded-game.rs (target\debug\deps\low_power_embedded_game-e8b5d0fe8becc751.exe)
+
+running 15 tests
+test divmod::eq ... ok
+test divmod::example ... ok
+test divmod::multiple ... ok
+test divmod::less ... ok
+test divmod::powerup ... ok
+test evens::offset_i32 ... ok
+test evens::reverse_i32 ... ok
+test evens::simple_i32 ... ok
+test manhattan::origin ... ok
+test evens::strs ... ok
+test manhattan::q1_unit ... ok
+test manhattan::q2_unit ... ok
+test manhattan::q3_unit ... ok
+test manhattan::q4_unit ... ok
+test manhattan::relative_prime ... ok
+
+test result: ok. 15 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+   Doc-tests low_power_embedded_game
+   
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
