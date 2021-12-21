@@ -1,0 +1,30 @@
+>cargo test
+
+   Compiling role_playing_game v0.1.0 (~\exercism\rust\role-playing-game)
+    Finished test [unoptimized + debuginfo] target(s) in 0.03s
+     Running unittests (target\debug\deps\role_playing_game-41e50fc0649dfbf0.exe)
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running tests\role-playing-game.rs (target\debug\deps\role_playing_game-ccf912d9694c9018.exe)
+
+running 8 tests
+test test_cast_large_spell_with_no_mana_pool ... ok
+test test_cast_spell_with_enough_mana ... ok
+test test_cast_spell_with_insufficient_mana ... ok
+test test_cast_spell_with_no_mana_pool ... ok
+test test_reviving_alive_player ... ok
+test test_reviving_dead_level10_player ... ok
+test test_reviving_dead_level9_player ... ok
+test test_reviving_dead_player ... ok
+
+test result: ok. 8 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+   Doc-tests role_playing_game
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
