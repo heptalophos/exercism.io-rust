@@ -6,9 +6,7 @@ pub struct Robot {
 
 impl Robot {
     pub fn new() -> Self {
-        Self {
-            name: Robot::generate_name(),
-        }
+        Self { name: Robot::generate_name() }
     }
 
     pub fn name(&self) -> &str {
