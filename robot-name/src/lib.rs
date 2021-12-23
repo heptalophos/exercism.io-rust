@@ -1,4 +1,11 @@
 use rand::Rng;
+use std::cell::RefCell;
+use std::collections::HashSet;
+
+thread_local!(
+    static EXISTING: RefCell<HashSet<String>> = 
+        RefCell::new(HashSet::new())
+);
 
 pub struct Robot {
     name: String,
@@ -17,7 +24,19 @@ impl Robot {
         self.name = Robot::generate_name()
     }
 
-    fn generate_name() -> String {
+    pub fn generate_name() -> String {
+        EXISTING.with(|rs| {
+            let mut used_names = rs.borrow_mut();
+            loop {
+                let new_name = Robot::random_name();
+                if used_names.contains(&new_name) { continue; }
+                used_names.insert(new_name.clone());
+                return new_name;
+            }
+        })
+    }
+
+    fn random_name() -> String {
         let mut rng = rand::thread_rng();
         let mut new_name = String::new();
         for i in 0..=1 {
