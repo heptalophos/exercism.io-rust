@@ -8,8 +8,7 @@ pub fn is_valid_isbn(isbn: &str) -> bool {
             (_, 'X')     => Err("invalid X position"),
             (_,  digit)  => digit.to_string()
                                  .parse::<u32>()
-                                 .or(Err("digit error"))
-            })
+                                 .or(Err("digit error"))})
         .collect::<Result<Vec<_>, _>>()
         .map(|d| { 
             d.iter().enumerate()
