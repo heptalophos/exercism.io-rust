@@ -1,0 +1,33 @@
+>caro test
+
+   Compiling rpn_calculator v0.1.0 (~\exercism\rust\rpn-calculator)
+    Finished test [unoptimized + debuginfo] target(s) in 31.71s
+     Running unittests (target\debug\deps\rpn_calculator-714e8061a7d1fbba.exe)
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running tests\rpn-calculator.rs (target\debug\deps\rpn_calculator-cdcb15a786cd7009.exe)
+
+running 11 tests
+test test_complex_operation ... ok
+test test_empty_input_returns_none ... ok
+test test_intermediate_error_returns_none ... ok
+test test_simple_addition ... ok
+test test_simple_division ... ok
+test test_simple_multiplication ... ok
+test test_simple_subtraction ... ok
+test test_simple_value ... ok
+test test_too_few_operands_returns_none ... ok
+test test_too_many_operands_returns_none ... ok
+test test_zero_operands_returns_none ... ok
+
+test result: ok. 11 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+   Doc-tests rpn_calculator
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+

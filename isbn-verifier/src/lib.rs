@@ -6,10 +6,8 @@ pub fn is_valid_isbn(isbn: &str) -> bool {
         .map(|(idx, c)| match (idx, c) {
             (9, 'X')     => Ok(10),
             (_, 'X')     => Err("invalid X position"),
-            (_,  digit)  => digit.to_string()
-                                 .parse::<u32>()
-                                 .or(Err("digit error"))
-            })
+            (_,  digit)  => digit.to_string().parse::<u32>()
+                                 .or(Err("digit error"))})
         .collect::<Result<Vec<_>, _>>()
         .map(|d| { 
             d.iter().enumerate()
