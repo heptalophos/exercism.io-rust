@@ -1,0 +1,28 @@
+>cargo test
+
+   Compiling magazine_cutout v0.1.0 (~\exercism\rust\magazine-cutout)
+    Finished test [unoptimized + debuginfo] target(s) in 46.72s
+     Running unittests (target\debug\deps\magazine_cutout-632276c402af3653.exe)
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running tests\magazine-cutout.rs (target\debug\deps\magazine_cutout-f9b9348cace03dda.exe)
+
+running 6 tests
+test test_example_works ... ok
+test test_fn_returns_false_for_bad_input ... ok
+test test_fn_returns_true_for_good_input ... ok
+test test_case_sensitivity ... ok
+test test_magazine_has_one_good_word_many_times_but_still_cant_construct ... ok
+test test_magzine_has_more_than_words_available_than_needed ... ok
+
+test result: ok. 6 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+   Doc-tests magazine_cutout
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
