@@ -1,4 +1,3 @@
-#[allow(unreachable_patterns)]
 #[derive(Debug)]
 pub enum CalculatorInput {
     Add,
@@ -9,31 +8,33 @@ pub enum CalculatorInput {
 }
 
 use std::ops::{Add, Div, Mul, Sub};
+use self::CalculatorInput::*;
 
 pub fn evaluate(inputs: &[CalculatorInput]) -> Option<i32> {
     let mut stack: Vec<i32> = vec![];
     let mut error = false; 
     for input in inputs {
         match input {
-            CalculatorInput::Add => {
+            Add => {
                 let (operand2, operand1) = (stack.pop()?, stack.pop()?);
                 stack.push(i32::add(operand1, operand2));
             },
-            CalculatorInput::Subtract => {
+            Subtract => {
                 let (operand2, operand1) = (stack.pop()?, stack.pop()?);
                 stack.push(i32::sub(operand1, operand2));
             },
-            CalculatorInput::Multiply => {
+            Multiply => {
                 let (operand2, operand1) = (stack.pop()?, stack.pop()?);
                 stack.push(i32::mul(operand1, operand2));
             },
-            CalculatorInput::Divide => {
+            Divide => {
                 let (operand2, operand1) = (stack.pop()?, stack.pop()?);
                 stack.push(i32::div(operand1, operand2));
             },
-            CalculatorInput::Value(value) => {
+            Value(value) => {
                 stack.push(*value);
             },
+            #[allow(unreachable_patterns)]
             _ => {
                 error = true; 
                 break;
