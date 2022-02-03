@@ -68,3 +68,39 @@ running 0 tests
 
 test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
 
+
+
+>cargo test
+
+   Compiling palindrome-products v1.2.0 (~\exercism\rust\palindrome-products)
+    Finished test [unoptimized + debuginfo] target(s) in 14.66s
+     Running unittests (target\debug\deps\palindrome_products-f3a587eac53e118b.exe)
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running tests\palindrome-products.rs (target\debug\deps\palindrome_products-668169b252c92cda.exe)
+
+running 12 tests
+test test_empty_result_for_largest_if_no_palindrome_in_the_range ... ok
+test test_empty_result_for_smallest_if_no_palindrome_in_the_range ... ok
+test test_error_result_for_largest_if_min_is_more_than_max ... ok
+test test_error_result_for_smallest_if_min_is_more_than_max ... ok
+test test_find_the_largest_palindrome_from_double_digit_factors ... ok
+test test_find_smallest_palindrome_from_triple_digit_factors ... ok
+test test_find_the_largest_palindrome_from_triple_digit_factors ... ok
+test test_finds_the_largest_palindrome_from_single_digit_factors ... ok
+test test_find_the_smallest_palindrome_from_double_digit_factors ... ok
+test test_finds_the_smallest_palindrome_from_single_digit_factors ... ok
+test test_find_the_largest_palindrome_from_four_digit_factors ... ok
+test test_find_smallest_palindrome_from_four_digit_factors ... ok
+
+test result: ok. 12 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 20.47s
+
+   Doc-tests palindrome-products
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
