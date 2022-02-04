@@ -7,43 +7,42 @@ pub enum CalculatorInput {
     Value(i32),
 }
 
-// fn operation(stack: &mut Vec<i32>, op: impl Fn(i32, i32) -> i32) -> Option<i32> {
-//     stack.pop().and_then(|b| stack.pop().map(|a| op(a, b)))
-// }
-
 use std::ops::{Add, Div, Mul, Sub};
+use self::CalculatorInput::*;
 
 pub fn evaluate(inputs: &[CalculatorInput]) -> Option<i32> {
     let mut stack: Vec<i32> = vec![];
+    let mut error = false; 
     for input in inputs {
         match input {
-            CalculatorInput::Add => {
-                let v1 = stack.pop()?;
-                let v2 = stack.pop()?;
-                stack.push(i32::add(v1, v2));
+            Add => {
+                let (operand2, operand1) = (stack.pop()?, stack.pop()?);
+                stack.push(i32::add(operand1, operand2));
             },
-            CalculatorInput::Subtract => {
-                let v1 = stack.pop()?;
-                let v2 = stack.pop()?;
-                stack.push(i32::sub(v2, v1));
+            Subtract => {
+                let (operand2, operand1) = (stack.pop()?, stack.pop()?);
+                stack.push(i32::sub(operand1, operand2));
             },
-            CalculatorInput::Multiply => {
-                let v1 = stack.pop()?;
-                let v2 = stack.pop()?;
-                stack.push(i32::mul(v1, v2));
+            Multiply => {
+                let (operand2, operand1) = (stack.pop()?, stack.pop()?);
+                stack.push(i32::mul(operand1, operand2));
             },
-            CalculatorInput::Divide => {
-                let v1 = stack.pop()?;
-                let v2 = stack.pop()?;
-                stack.push(i32::div(v2, v1));
+            Divide => {
+                let (operand2, operand1) = (stack.pop()?, stack.pop()?);
+                stack.push(i32::div(operand1, operand2));
             },
-            CalculatorInput::Value(v) => {
-                stack.push(*v);
+            Value(value) => {
+                stack.push(*value);
+            },
+            #[allow(unreachable_patterns)]
+            _ => {
+                error = true; 
+                break;
             }
         }
     }
-    match stack.len() {
-        1 => stack.pop(),
-        _ => None
+    match (error, stack.len()) {
+            (false, 1) => stack.pop(),
+            (_, _) => None
     }
 }

@@ -7,11 +7,9 @@ impl Palindrome {
     pub fn new(a: u64, b: u64) -> Palindrome {
         Palindrome {x: a, y: b}
     }
-
     pub fn value(&self) -> u64 {
         self.x * self.y
     }
-
     pub fn insert(&mut self, a: u64, b: u64) {
         self.x = a;
         self.y = b;
@@ -43,7 +41,8 @@ pub fn palindrome_products(min: u64, max: u64) -> Option<(Palindrome, Palindrome
             }
         }
     }
-    // println!("Palindromes found: {}", found);
-    if found == 0 { None }
-    else { Some((pmin, pmax)) }
+    match found {
+        0 => None,
+        _ => Some((pmin, pmax))
+    }
 }

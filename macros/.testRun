@@ -1,0 +1,40 @@
+>cargo test
+
+   Compiling macros v0.1.0 (~\exercism\rust\macros)
+    Finished test [unoptimized + debuginfo] target(s) in 46.46s
+     Running unittests (target\debug\deps\macros-6fcdf06e06f9f908.exe)
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running tests\macros.rs (target\debug\deps\macros-a6184116cbefcee6.exe)
+
+running 18 tests
+test test::type_not_in_scope ... ok
+test test::test_macro_out_of_scope ... ok
+test test_compile_fails_comma_sep ... ok
+test test_compile_fails_double_commas ... ok
+test test_compile_fails_missing_argument ... ok
+test test_compile_fails_leading_comma ... ok
+test test_compile_fails_no_comma ... ok
+test test_compile_fails_only_arrow ... ok
+test test_compile_fails_only_comma ... ok
+test test_empty ... ok
+test test_nested ... ok
+test test_no_trailing_comma ... ok
+test test_single ... ok
+test test_trailing_comma ... ok
+test test_type_override ... ok
+test test_compile_fails_single_argument ... ok
+test test_compile_fails_triple_arguments ... ok
+test test_compile_fails_two_arrows ... ok
+
+test result: ok. 18 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 22.55s
+
+   Doc-tests macros
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
