@@ -1,1 +1,9 @@
-{"track":"rust","exercise":"accumulate","id":"8fc2d93031db4a18b3df7e53e10a0221","url":"https://exercism.org/tracks/rust/exercises/accumulate","handle":"heptalophos","is_requester":true,"auto_approve":false}
+{
+    "track": "rust",
+    "exercise": "accumulate",
+    "id": "8fc2d93031db4a18b3df7e53e10a0221",
+    "url": "https://exercism.org/tracks/rust/exercises/accumulate/solutions/8fc2d93031db4a18b3df7e53e10a0221",
+    "handle": "heptalophos",
+    "is_requester": true,
+    "auto_approve": false
+}
