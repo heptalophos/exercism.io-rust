@@ -1,0 +1,40 @@
+>cargo test
+
+   Compiling roman-numerals v1.0.0 (~\exercism\rust\roman-numerals)
+    Finished test [unoptimized + debuginfo] target(s) in 11.08s
+     Running unittests (target\debug\deps\roman_numerals-04ff386acd563c9b.exe)
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running tests\roman-numerals.rs (target\debug\deps\roman_numerals-25e338210a0c2696.exe)
+
+running 18 tests
+test test_1024 ... ok
+test test_141 ... ok
+test test_163 ... ok
+test test_3000 ... ok
+test test_402 ... ok
+test test_575 ... ok
+test test_911 ... ok
+test test_fifty_nine ... ok
+test test_five ... ok
+test test_forty_eight ... ok
+test test_four ... ok
+test test_nine ... ok
+test test_ninety_three ... ok
+test test_one ... ok
+test test_six ... ok
+test test_three ... ok
+test test_twenty_seven ... ok
+test test_two ... ok
+
+test result: ok. 18 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.07s
+
+   Doc-tests roman-numerals
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
