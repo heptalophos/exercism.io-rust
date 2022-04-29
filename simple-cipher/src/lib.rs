@@ -3,12 +3,12 @@ use rand::Rng;
 
 pub fn encode(key: &str, s: &str) -> Option<String> {
     let right = |c, k| (((c as u8) - b'a' + (k as u8) - b'a') % 26 + b'a') as char;
-    return shift(key, s, right);
+    shift(s, key, right)
 }
 
 pub fn decode(key: &str, s: &str) -> Option<String> {
     let left = |c, k| ((26 + (c as u8) - (k as u8)) % 26 + b'a') as char;
-    return shift(key, s, left);
+    shift(s, key, left)
 }
 
 pub fn encode_random(s: &str) -> (String, String) {
@@ -16,10 +16,10 @@ pub fn encode_random(s: &str) -> (String, String) {
     let key: String = (0..max(s.chars().count(), 100))
                       .map(|_| rng.gen_range(b'a'..=b'z') as char)
                       .collect::<String>();
-    return (key.to_owned(), encode(&key, s).unwrap());
+    (key.to_owned(), encode(&key, s).unwrap())
 }
 
-fn shift(key: &str, text: &str, rotation: fn(u8, u8) -> char) -> Option<String> {
+fn shift(text: &str, key: &str, rotation: fn(u8, u8) -> char) -> Option<String> {
     if key.len() <= 0 || key.chars().any(|k| !k.is_ascii_lowercase()) {
         return None
     };
@@ -27,5 +27,5 @@ fn shift(key: &str, text: &str, rotation: fn(u8, u8) -> char) -> Option<String> 
     for (t, k) in text.chars().zip(key.chars().cycle()) {
         shifted.push(rotation(t as u8, k as u8));
     }
-    return Some(shifted.iter().collect());
+    Some(shifted.iter().collect())
 }
