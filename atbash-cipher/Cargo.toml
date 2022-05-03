@@ -2,4 +2,4 @@
 edition = "2021"
 name = "atbash-cipher"
 version = "1.2.0"
-authors = ["heptalophos", "invigo"]
+authors = ["heptalophos"]
