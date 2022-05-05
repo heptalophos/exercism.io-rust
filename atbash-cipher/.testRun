@@ -1,0 +1,36 @@
+>cargo test
+
+   Compiling atbash-cipher v1.2.0 (~\exercism\rust\atbash-cipher)
+    Finished test [unoptimized + debuginfo] target(s) in 3.12s
+     Running unittests (target\debug\deps\atbash_cipher-f28223b56145e596.exe)
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running tests\atbash-cipher.rs (target\debug\deps\atbash_cipher-1b8f0229f520bbdc.exe)
+
+running 14 tests
+test test_decode_a_sentence ... ok
+test test_decode_exercism ... ok
+test test_decode_all_the_letters ... ok
+test test_decode_numbers ... ok
+test test_decode_with_no_spaces ... ok
+test test_decode_with_too_many_spaces ... ok
+test test_encode_all_the_letters ... ok
+test test_encode_deep_thought ... ok
+test test_encode_mindblowingly ... ok
+test test_encode_no ... ok
+test test_encode_spaces ... ok
+test test_encode_omg ... ok
+test test_encode_numbers ... ok
+test test_encode_yes ... ok
+
+test result: ok. 14 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+   Doc-tests atbash-cipher
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
