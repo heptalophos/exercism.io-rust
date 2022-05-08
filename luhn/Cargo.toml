@@ -1,0 +1,5 @@
+[package]
+edition = "2021"
+name = "luhn"
+version = "1.6.1"
+authors = ["heptalophos", "invigo"]
