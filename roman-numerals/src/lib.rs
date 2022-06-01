@@ -14,9 +14,10 @@ impl Display for Roman {
         let mut arabic = self.0;
         let mut roman = String::new();
         while arabic > 0 {
-            let (a, r) = numeral_map.iter().rev()
-                         .filter(|&(n, _)| arabic >= *n)
-                         .next().unwrap();
+            let (a, r) = 
+                numeral_map.iter().rev()
+                           .filter(|&(n, _)| arabic >= *n)
+                           .next().unwrap();
             arabic -= a;
             roman.push_str(r);  
         }
