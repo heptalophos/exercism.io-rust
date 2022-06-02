@@ -1,0 +1,33 @@
+>cargo test -- --include-ignored
+
+   Compiling palindrome-products v1.2.0 (~\exercism\rust\palindrome-products)
+    Finished test [unoptimized + debuginfo] target(s) in 8.03s
+     Running unittests (target\debug\deps\palindrome_products-f3a587eac53e118b.exe)
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running tests\saddle-points.rs (target\debug\deps\saddle_points-b1aedb4e81f1bba6.exe)
+
+running 11 tests
+test identify_bottom_right_saddle_point ... ok
+test identify_all_saddle_points ... ok
+test identify_empty_matrix ... ok
+test identify_lack_of_saddle_point ... ok
+test identify_single_saddle_point ... ok
+test multiple_saddle_points_in_col ... ok
+test multiple_saddle_points_in_row ... ok
+test non_square_matrix_high ... ok
+test non_square_matrix_wide ... ok
+test single_row_matrix ... ok
+test single_column_matrix ... ok
+
+test result: ok. 11 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+   Doc-tests saddle-points
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
