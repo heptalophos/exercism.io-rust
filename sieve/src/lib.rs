@@ -1,16 +1,11 @@
 use std::ops::Range;
 
 pub fn primes_up_to(upper_bound: u64) -> Vec<u64> {
-    
-    if upper_bound > 1 { 
-        sieve(2..(upper_bound + 1))
-    } else {
-        vec![]
-    }
+    if upper_bound < 2 { return vec![] } 
+    sieve(2..(upper_bound + 1))
 }
 
 fn sieve(range: Range<u64>) -> Vec<u64> {
-
     let mut eratosthenes = range.collect::<Vec<u64>>();
     let mut primes = Vec::<u64>::new();
     
@@ -19,6 +14,5 @@ fn sieve(range: Range<u64>) -> Vec<u64> {
         primes.push(prime);
         eratosthenes.retain(|n| n % prime != 0);
     }
-    
     primes
 }
