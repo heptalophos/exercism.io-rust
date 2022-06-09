@@ -42,3 +42,32 @@ running 0 tests
 
 test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
 
+
+
+>cargo test -- --include-ignored
+
+   Compiling sieve v1.1.0 (~\exercism\rust\sieve)
+    Finished test [unoptimized + debuginfo] target(s) in 30.85s
+     Running unittests (target\debug\deps\sieve-f2aff4c9e7ebd88b.exe)
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running tests\sieve.rs (target\debug\deps\sieve-378d9f72c1ada33f.exe)
+
+running 5 tests
+test limit_is_prime ... ok
+test limit_is_the_first_prime ... ok
+test limit_lower_than_the_first_prime ... ok
+test limit_of_1000 ... ok
+test primes_up_to_10 ... ok
+
+test result: ok. 5 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+   Doc-tests sieve
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
