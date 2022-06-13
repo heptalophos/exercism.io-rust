@@ -1,18 +1,27 @@
-pub struct Luhn;
+pub struct Luhn(String);
 
-impl Luhn {
-    pub fn is_valid(&self) -> bool {
-        unimplemented!("Determine if the current Luhn struct contains a valid credit card number.");
+impl<T: std::fmt::Display> From<T> for Luhn {
+    fn from(input: T) -> Self {
+        Self(format!("{}", input))
     }
 }
 
-/// Here is the example of how the From trait could be implemented
-/// for the &str type. Naturally, you can implement this trait
-/// by hand for the every other type presented in the test suite,
-/// but your solution will fail if a new type is presented.
-/// Perhaps there exists a better solution for this problem?
-impl<'a> From<&'a str> for Luhn {
-    fn from(input: &'a str) -> Self {
-        unimplemented!("From the given input '{}' create a new Luhn struct.", input);
+impl Luhn {
+    pub fn is_valid(&self) -> bool {
+        let code = &self.0;
+        let sanitized = code.replace(" ", "");
+        let mut checksum = 0;
+        let mut count = 0;
+        for (i, c) in sanitized.char_indices() {
+            count += 1;
+            match ((sanitized.len() - i - 1) % 2, c.to_digit(10)) {
+                (0, Some(d))          => checksum += d,
+                (1, Some(d)) if d > 4 => checksum += 2 * d - 9,
+                (1, Some(d))          => checksum += 2 * d,
+                (_, _)                => return false
+            }
+        }
+        if count < 2 { false } 
+        else { checksum % 10 == 0 }
     }
 }
