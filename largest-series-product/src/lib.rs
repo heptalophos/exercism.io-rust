@@ -5,9 +5,13 @@ pub enum Error {
 }
 
 pub fn lsp(string_digits: &str, span: usize) -> Result<u64, Error> {
-    unimplemented!(
-        "largest series product of a span of {} digits in {}",
-        span,
-        string_digits
-    );
+    if span == 0 { 
+        return Ok(1) 
+    }
+    string_digits.chars()
+    .map(|c| c.to_digit(10).ok_or(Error::InvalidDigit(c)))
+    .collect::<Result<Vec<_>,_>>()?
+    .windows(span)
+    .map(|slice| slice.iter().map(|d| *d as u64).product())
+    .max().ok_or(Error::SpanTooLong)
 }
