@@ -1,0 +1,37 @@
+cargo test -- --include-ignored
+
+   Compiling largest-series-product v1.2.0 (~\exercism\rust\largest-series-product)
+    Finished test [unoptimized + debuginfo] target(s) in 31.37s
+     Running unittests (target\debug\deps\largest_series_product-3da3202cdb02da65.exe)
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running tests\largest-series-product.rs (target\debug\deps\largest_series_product-b0361199e605677a.exe)
+
+running 15 tests
+test a_string_with_non_digits_is_an_error ... ok
+test a_span_is_longer_than_number_is_an_error ... ok
+test an_empty_string_and_no_span_returns_one ... ok
+test a_non_empty_string_and_no_span_returns_one ... ok
+test find_the_largest_product_of_five_with_numbers_in_order ... ok
+test find_the_largest_product_of_three_with_numbers_in_order ... ok
+test find_the_largest_product_of_three_with_numbers_not_in_order ... ok
+test empty_string_and_non_zero_span_is_an_error ... ok
+test find_the_largest_product_of_two_with_numbers_not_in_order ... ok
+test find_the_largest_product_when_span_equals_length ... ok
+test return_is_a_result ... ok
+test find_the_largest_product_of_two_with_numbers_in_order ... ok
+test returns_zero_if_number_is_zeros ... ok
+test returns_zero_if_all_products_are_zero ... ok
+test span_of_six_in_a_large_number ... ok
+
+test result: ok. 15 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+   Doc-tests largest-series-product
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
