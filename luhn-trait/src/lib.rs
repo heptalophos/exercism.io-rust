@@ -2,13 +2,22 @@ pub trait Luhn {
     fn valid_luhn(&self) -> bool;
 }
 
-/// Here is the example of how to implement custom Luhn trait
-/// for the &str type. Naturally, you can implement this trait
-/// by hand for the every other type presented in the test suite,
-/// but your solution will fail if a new type is presented.
-/// Perhaps there exists a better solution for this problem?
-impl<'a> Luhn for &'a str {
+impl<T: std::fmt::Display> Luhn for T {
     fn valid_luhn(&self) -> bool {
-        unimplemented!("Determine if '{}' is a valid credit card number.", self);
+        let code = format!("{}", &self);
+        let sanitized = code.replace(" ", "");
+        let mut checksum = 0;
+        let mut count = 0;
+        for (i, c) in sanitized.char_indices() {
+            count += 1;
+            match ((sanitized.len() - i - 1) % 2, c.to_digit(10)) {
+                (0, Some(d))          => checksum += d,
+                (1, Some(d)) if d > 4 => checksum += 2 * d - 9,
+                (1, Some(d))          => checksum += 2 * d,
+                (_, _)                => return false
+            }
+        }
+        if count < 2 { false } 
+        else { checksum % 10 == 0 }
     }
 }
