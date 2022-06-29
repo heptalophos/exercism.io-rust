@@ -1,0 +1,34 @@
+>cargo test -- --include-ignored
+
+   Compiling rotational-cipher v1.0.0 (~\exercism\rust\rotational-cipher)
+    Finished test [unoptimized + debuginfo] target(s) in 7.16s
+     Running unittests (target\debug\deps\rotational_cipher-c8f3fab9dac1be3f.exe)
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running tests\rotational-cipher.rs (target\debug\deps\rotational_cipher-e07743ace596c173.exe)
+
+running 12 tests
+test rotate_a_1 ... ok
+test rotate_a_26 ... ok
+test rotate_a_0 ... ok
+test rotate_all_the_letters ... ok
+test rotate_caps ... ok
+test rotate_letters_negative_26 ... ok
+test rotate_m_13 ... ok
+test rotate_m_negative_1 ... ok
+test rotate_n_13_with_wrap ... ok
+test rotate_numbers ... ok
+test rotate_punctuation ... ok
+test rotate_spaces ... ok
+
+test result: ok. 12 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+   Doc-tests rotational-cipher
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
