@@ -2,3 +2,5 @@
 edition = "2021"
 name = "rotational-cipher"
 version = "1.0.0"
+description = "A rotational cipher"
+authors = ["heptalophos"]
