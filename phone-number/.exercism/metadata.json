@@ -1,1 +1,9 @@
-{"track":"rust","exercise":"phone-number","id":"e4e6b36bbb474ae0a75dadab0e139c9b","url":"https://exercism.org/tracks/rust/exercises/phone-number","handle":"heptalophos","is_requester":true,"auto_approve":false}
+{
+    "track": "rust",
+    "exercise": "phone-number",
+    "id": "e4e6b36bbb474ae0a75dadab0e139c9b",
+    "url": "https://exercism.org/tracks/rust/exercises/phone-number/solutions/e4e6b36bbb474ae0a75dadab0e139c9b",
+    "handle": "heptalophos",
+    "is_requester": true,
+    "auto_approve": false
+}
