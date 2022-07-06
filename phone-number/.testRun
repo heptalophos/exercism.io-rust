@@ -1,0 +1,40 @@
+>cargo test -- --include-ignored
+
+   Compiling phone-number v1.6.1 (~\exercism\rust\phone-number)
+    Finished test [unoptimized + debuginfo] target(s) in 26.54s
+     Running unittests (target\debug\deps\phone_number-84751561a66ef057.exe)
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running tests\phone-number.rs (target\debug\deps\phone_number-4a057aa425ed8621.exe)
+
+running 18 tests
+test test_cleans_numbers_with_multiple_spaces ... ok
+test test_cleans_numbers_with_dots ... ok
+test test_cleans_the_number ... ok
+test test_invalid_if_area_code_starts_with_0 ... ok
+test test_invalid_if_area_code_starts_with_0_on_valid_11digit_number ... ok
+test test_invalid_if_area_code_starts_with_1 ... ok
+test test_invalid_if_area_code_starts_with_1_on_valid_11digit_number ... ok
+test test_invalid_if_exchange_code_starts_with_0 ... ok
+test test_invalid_if_exchange_code_starts_with_0_on_valid_11digit_number ... ok
+test test_invalid_if_exchange_code_starts_with_1 ... ok
+test test_invalid_if_exchange_code_starts_with_1_on_valid_11digit_number ... ok
+test test_invalid_when_11_digits_does_not_start_with_a_1 ... ok
+test test_invalid_when_9_digits ... ok
+test test_invalid_when_more_than_11_digits ... ok
+test test_invalid_with_letters ... ok
+test test_invalid_with_punctuations ... ok
+test test_valid_when_11_digits_and_starting_with_1 ... ok
+test test_valid_when_11_digits_and_starting_with_1_even_with_punctuation ... ok
+
+test result: ok. 18 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.01s
+
+   Doc-tests phone-number
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
