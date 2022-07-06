@@ -2,3 +2,5 @@
 edition = "2021"
 name = "phone-number"
 version = "1.6.1"
+description = "A solution to exercism.io's phone-number programming exercise."
+authors = ["heptalophos"]
