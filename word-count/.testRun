@@ -1,0 +1,33 @@
+>cargo test -- --include-ignored
+
+   Compiling word-count v1.2.0 (~\exercism\rust\word-count)
+    Finished test [unoptimized + debuginfo] target(s) in 5.17s
+     Running unittests (target\debug\deps\word_count-b8b364032d92b54c.exe)
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running tests\word-count.rs (target\debug\deps\word_count-9e8f14363f555833.exe)
+
+running 11 tests
+test multiple_spaces_not_detected_as_a_word ... ok
+test expanded_lists ... ok
+test cramped_lists ... ok
+test test_count_multiple_occurrences ... ok
+test test_ignore_punctuation ... ok
+test test_count_one_word ... ok
+test test_count_one_of_each ... ok
+test test_include_numbers ... ok
+test with_quotations ... ok
+test with_apostrophes ... ok
+test test_normalize_case ... ok
+
+test result: ok. 11 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+   Doc-tests word-count
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
