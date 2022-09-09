@@ -1,5 +1,5 @@
 pub fn rotate(input: &str, key: i8) -> String {
-    return input.chars().map(|c| shift(c as char, key)).collect();
+    input.chars().map(|c| shift(c as char, key)).collect::<String>()
 }
 
 fn shift(ch: char, key: i8) -> char {
