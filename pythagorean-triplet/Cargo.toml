@@ -4,3 +4,4 @@
 edition = "2021"
 name = "pythagorean_triplet"
 version = "1.0.0"
+authors = ["heptalophos"]
