@@ -33,3 +33,42 @@ running 0 tests
 
 test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
 
+
+
+>cargo test --features big-primes -- --include-ignored
+
+    Updating crates.io index
+   Compiling cfg-if v1.0.0
+   Compiling ppv-lite86 v0.2.16
+   Compiling getrandom v0.2.7
+   Compiling rand_core v0.6.4
+   Compiling rand_chacha v0.3.1
+   Compiling rand v0.8.5
+   Compiling diffie-hellman v0.1.0 (~\exercism\rust\diffie-hellman)
+    Finished test [unoptimized + debuginfo] target(s) in 8.97s
+     Running unittests (target\debug\deps\diffie_hellman-4e59b4464034ebf0.exe)
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running tests\diffie-hellman.rs (target\debug\deps\diffie_hellman-8b1232ff179bbf64.exe)
+
+running 9 tests
+test test_public_key_correct ... ok
+test test_public_key_correct_big_numbers ... ok
+test test_changed_secret_key ... ok
+test test_changed_secret_key_biggest_numbers ... ok
+test test_private_key_in_range_key ... ok
+test test_public_key_correct_biggest_numbers ... ok
+test test_secret_key_correct ... ok
+test test_secret_key_correct_big_numbers ... ok
+test test_secret_key_correct_biggest_numbers ... ok
+
+test result: ok. 9 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+   Doc-tests diffie-hellman
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
