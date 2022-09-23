@@ -1,4 +1,4 @@
-cargo test -- --include-ignored
+>cargo test -- --include-ignored
 
    Compiling largest-series-product v1.2.0 (~\exercism\rust\largest-series-product)
     Finished test [unoptimized + debuginfo] target(s) in 31.37s
