@@ -1,5 +1,4 @@
 >cargo test -- --include-ignored
-
    Compiling pythagorean_triplet v1.0.0 (~\exercism\rust\pythagorean-triplet)
     Finished test [unoptimized + debuginfo] target(s) in 2.12s
      Running unittests (target\debug\deps\pythagorean_triplet-9f3542a6bdd93231.exe)
@@ -23,6 +22,36 @@ test result: ok. 7 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; fini
 
    Doc-tests pythagorean_triplet
    
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+
+
+>cargo test -- --include-ignored
+   Compiling pythagorean_triplet v1.0.0 (~\exercism\rust\pythagorean-triplet)
+    Finished test [unoptimized + debuginfo] target(s) in 4.72s
+     Running unittests (target\debug\deps\pythagorean_triplet-9f3542a6bdd93231.exe)
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running tests\pythagorean-triplet.rs (target\debug\deps\pythagorean_triplet-78f02d524cb0cc7f.exe)
+
+running 7 tests
+test test_returns_all_matching_triplets ... ok
+test test_several_matching_triplets ... ok
+test test_no_matching_triplets_for_1001 ... ok
+test test_triplets_for_large_number ... ok
+test test_triplets_whose_sum_is_108 ... ok
+test test_triplets_whose_sum_is_12 ... ok
+test test_triplets_whose_sum_is_1000 ... ok
+
+test result: ok. 7 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+   Doc-tests pythagorean_triplet
+
 running 0 tests
 
 test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
