@@ -15,7 +15,7 @@ impl Palindrome {
 
 pub fn palindrome_products(min: u64, max: u64) -> Option<(Palindrome, Palindrome)> {
     if min > max {
-        return None;
+        return None
     }
     let mut pmin = max * max;
     let mut pmax = min * min;
