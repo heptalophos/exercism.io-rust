@@ -4,7 +4,6 @@ running 0 tests
 
 test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
 
-
 running 4 tests
 test test_first_prime ... ok
 test test_second_prime ... ok
@@ -13,21 +12,17 @@ test test_big_prime ... ok
 
 test result: ok. 4 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
 
-
 running 0 tests
 
 test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
-
 
 
 
 >cargo test
 
-
 running 0 tests
 
 test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
-
 
 running 4 tests
 test test_big_prime ... ignored
@@ -37,8 +32,35 @@ test test_first_prime ... ok
 
 test result: ok. 1 passed; 0 failed; 3 ignored; 0 measured; 0 filtered out
 
-
 running 0 tests
 
 test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+
+
+
+>cargo test -- --include-ignored
+   Compiling nth_prime v2.1.0 (~\exercism\rust\nth-prime)
+    Finished test [unoptimized + debuginfo] target(s) in 3.25s
+     
+     Running unittests (target\debug\deps\nth_prime-46586d9846ba7928.exe)
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running tests\nth-prime.rs (target\debug\deps\nth_prime-af0a08fb3dfd6321.exe)
+
+running 4 tests
+test test_first_prime ... ok
+test test_second_prime ... ok
+test test_sixth_prime ... ok
+test test_big_prime ... ok
+
+test result: ok. 4 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.28s
+
+   Doc-tests nth_prime
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
 
