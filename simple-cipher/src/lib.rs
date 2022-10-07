@@ -2,7 +2,8 @@ use std::cmp::max;
 use rand::Rng;
 
 pub fn encode(key: &str, s: &str) -> Option<String> {
-    let right = |c, k| (((c as u8) - b'a' + (k as u8) - b'a') % 26 + b'a') as char;
+    let right = |c, k| 
+                (((c as u8) - b'a' + (k as u8) - b'a') % 26 + b'a') as char;
     shift(s, key, right)
 }
 
