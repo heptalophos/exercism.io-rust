@@ -41,3 +41,47 @@ running 0 tests
 
 test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
 
+
+
+>cargo test -- --include-ignored
+   Compiling luhn v1.6.1 (~\exercism\rust\luhn)
+    Finished test [unoptimized + debuginfo] target(s) in 3.82s
+     Running unittests (target\debug\deps\luhn-5e10595397039060.exe)
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running tests\luhn.rs (target\debug\deps\luhn-478289e562b5c068.exe)
+
+running 21 tests
+test symbols_are_invalid ... ok
+test test_a_simple_valid_sin_that_becomes_invalid_if_reversed ... ok
+test strings_that_contain_non_digits_are_invalid ... ok
+test test_a_simple_valid_sin_that_remains_valid_if_reversed ... ok
+test test_a_single_zero_is_invalid ... ok
+test test_input_digit_9_is_correctly_converted_to_output_digit_9 ... ok
+test test_invalid_canadian_sin ... ok
+test test_a_valid_canadian_sin ... ok
+test test_invalid_char_in_middle_with_sum_divisible_by_10_isnt_allowed ... ok
+test test_more_than_a_single_zero_is_valid ... ok
+test test_single_digit_strings_can_not_be_valid ... ok
+test test_invalid_credit_card ... ok
+test test_single_zero_with_space_is_invalid ... ok
+test test_using_ascii_value_for_doubled_nondigit_isnt_allowed ... ok
+test test_using_ascii_value_for_nondoubled_nondigit_isnt_allowed ... ok
+test test_valid_number_with_an_even_number_of_digits ... ok
+test test_valid_number_with_an_odd_number_of_spaces ... ok
+test test_valid_strings_with_a_nondigit_added_at_the_end_become_invalid ... ok
+test test_valid_strings_with_numeric_unicode_characters_become_invalid ... ok
+test test_valid_strings_with_punctuation_included_become_invalid ... ok
+test test_valid_strings_with_symbols_included_become_invalid ... ok
+
+test result: ok. 21 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+   Doc-tests luhn
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
