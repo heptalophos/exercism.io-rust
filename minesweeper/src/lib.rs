@@ -1,15 +1,7 @@
 const MINE: char = '*';
 
-pub fn annotate(minefield: &[&str]) -> Vec<String> {
-    minefield.iter().enumerate()
-             .map(|(r, row)| {
-                    row.chars().enumerate()
-                    .map(|(c, tile)| 
-                            match tile {
-                                '*' => MINE,
-                                 _ => tile_value(r, c, minefield)
-                    }).collect()
-             }).collect()
+fn tile(r: usize, c: usize, field: &[&str]) -> Option<char> {
+    field.get(r).and_then(|row| row.chars().nth(c))
 }
 
 fn tile_value(row: usize, col: usize, field: &[&str]) -> char {
@@ -21,12 +13,18 @@ fn tile_value(row: usize, col: usize, field: &[&str]) -> char {
             }
         }
     }
-    match mine_count {
-        0 => ' ',
-        _ =>  char::from(48u8 + mine_count)
-    }
+    if mine_count == 0 { ' ' } 
+    else { char::from(48u8 + mine_count) }
 } 
 
-fn tile(r: usize, c: usize, field: &[&str]) -> Option<char> {
-    field.get(r).and_then(|row| row.chars().nth(c))
+pub fn annotate(minefield: &[&str]) -> Vec<String> {
+    minefield.iter().enumerate()
+             .map(|(r, row)| {
+                row.chars().enumerate()
+                   .map(|(c, tile)| 
+                        match tile {
+                            '*' => MINE,
+                             _  => tile_value(r, c, minefield)
+                   }).collect()
+             }).collect()
 }
