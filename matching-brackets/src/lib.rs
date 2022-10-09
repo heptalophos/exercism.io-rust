@@ -1,7 +1,5 @@
 pub fn brackets_are_balanced(string: &str) -> bool {
-    
     let mut stack: Vec<char> = Vec::new();
-
     for ch in string.chars() {
         match ch {
             '{' => stack.push('}'),
@@ -9,7 +7,7 @@ pub fn brackets_are_balanced(string: &str) -> bool {
             '(' => stack.push(')'),
             '}' | ']' | ')' => { 
                 let p = stack.pop();
-                if p == None || p.unwrap() != ch { 
+                if p == None || p != Some( ch ) { 
                     return false 
                 }
             }, 
