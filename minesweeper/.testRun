@@ -30,3 +30,39 @@ test result: ok. 12 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; fin
 running 0 tests
 
 test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+
+
+>cargo test -- --include-ignored
+   Compiling minesweeper v1.1.0 (~\exercism\rust\minesweeper)
+    Finished test [unoptimized + debuginfo] target(s) in 4.39s
+     Running unittests (target\debug\deps\minesweeper-9e7991c3d1ea1b75.exe)
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running tests\minesweeper.rs (target\debug\deps\minesweeper-13f79dd5eed276fa.exe)
+
+running 12 tests
+test horizontal_line_mines_at_edges ... ok
+test board_with_only_mines ... ok
+test horizontal_line ... ok
+test cross ... ok
+test mine_surrounded_by_spaces ... ok
+test large_board ... ok
+test no_columns ... ok
+test no_mines ... ok
+test no_rows ... ok
+test space_surrounded_by_mines ... ok
+test vertical_line ... ok
+test vertical_line_mines_at_edges ... ok
+
+test result: ok. 12 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+   Doc-tests minesweeper
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
