@@ -15,9 +15,9 @@ impl Luhn {
         for (i, c) in sanitized.char_indices() {
             count += 1;
             match ((sanitized.len() - i - 1) % 2, c.to_digit(10)) {
-                (0, Some(d))          => checksum += d,
-                (1, Some(d)) if d > 4 => checksum += 2 * d - 9,
-                (1, Some(d))          => checksum += 2 * d,
+                (0, Some(d))          => checksum +=  d,
+                (1, Some(d)) if d > 4 => checksum += (d << 1) - 9,
+                (1, Some(d))          => checksum +=  d << 1,
                 (_, _)                => return false
             }
         }
