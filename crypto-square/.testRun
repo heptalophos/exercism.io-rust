@@ -1,0 +1,28 @@
+>cargo test -- --include-ignored
+   Compiling crypto-square v0.1.0 (~\exercism\rust\crypto-square)
+    Finished test [unoptimized + debuginfo] target(s) in 6.24s
+     Running unittests (target\debug\deps\crypto_square-9663c46f65c24e2b.exe)
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running tests\crypto-square.rs (target\debug\deps\crypto_square-1e3599fc1ac17a64.exe)
+
+running 7 tests
+test test_empty_input ... ok
+test test_empty_last_line ... ok
+test test_encrypt_also_decrypts_square ... ok
+test test_everything_becomes_lowercase ... ok
+test test_example ... ok
+test test_spaces_are_reorganized ... ok
+test test_long ... ok
+
+test result: ok. 7 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+   Doc-tests crypto-square
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
