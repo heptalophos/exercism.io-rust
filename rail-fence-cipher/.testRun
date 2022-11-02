@@ -1,0 +1,28 @@
+>cargo test -- --include-ignored
+   Compiling rail_fence_cipher v1.1.0 (~\exercism\rust\rail-fence-cipher)
+    Finished test [unoptimized + debuginfo] target(s) in 3.56s
+     Running unittests (target\debug\deps\rail_fence_cipher-eeb224c35143199e.exe)
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running tests\rail-fence-cipher.rs (target\debug\deps\rail_fence_cipher-35676fd193a6c1dc.exe)
+
+running 7 tests
+test test_decode_with_five_rails ... ok
+test test_decode_with_three_rails ... ok
+test test_encode_wide_characters ... ok
+test test_decode_with_six_rails ... ok
+test test_encode_with_ending_in_the_middle ... ok
+test test_encode_with_three_rails ... ok
+test test_encode_with_two_rails ... ok
+
+test result: ok. 7 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+   Doc-tests rail_fence_cipher
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
