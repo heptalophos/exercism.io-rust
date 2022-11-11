@@ -2,5 +2,7 @@
 edition = "2021"
 name = "decimal"
 version = "0.1.0"
+authors = ["heptalophos"]
 
 [dependencies]
+num_bigint = "0.4.3"
