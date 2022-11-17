@@ -14,7 +14,7 @@ struct Node<T> {
 
 impl<T> SimpleLinkedList<T> {
     pub fn new() -> Self {
-        Self { head: None, length: 0}
+        Self { head: None, length: 0 }
     }
 
     pub fn is_empty(&self) -> bool {
