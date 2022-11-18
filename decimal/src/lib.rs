@@ -3,14 +3,14 @@ use std::{iter, cmp::{Ordering, max, min}, ops::{Add, Sub, Mul}};
 /// Type implementing arbitrary-precision decimal arithmetic
 #[derive(Debug, Clone)]
 pub struct Decimal {
-    neg: bool,
+    sign: i8,
+    point: isize,
     digits: Vec<u8>,
-    power: isize,
 }
 
 impl Decimal {
     pub fn new() -> Decimal {
-        Decimal {neg: false, digits: Vec::new(), power: 0}
+        Decimal { sign: 1, point: 0, digits: Vec::new() }
     }
 
     pub fn try_from(num: &str) -> Option<Decimal> {
@@ -18,130 +18,112 @@ impl Decimal {
         let mut start = 0;
         if num.starts_with("-") {
             start = 1;
-            decimal.neg = true;
+            decimal.sign = -1;
         } else if num.starts_with("+") {
             start = 1;
         }
         for (i, d) in num[start..].chars().rev().enumerate() {
             if d == '.' {
-                decimal.power = -(i as isize)
+                decimal.point = -(i as isize)
             } else if let Some(digit) = d.to_digit(10) {
                 decimal.digits.push(digit as u8) 
             } else {
                 return None
             }
         };
-        Some(decimal.reduced_form())
+        Some( decimal )
     }
 
-    fn zip(this: &Decimal, that: &Decimal) -> Vec<(u8, u8)> {
-        let mut zip = vec![];
-        for i in 0..max(this.digits.len(), that.digits.len()) {
-            zip.push((*this.digits.get(i).unwrap_or(&0), 
-                      *that.digits.get(i).unwrap_or(&0)));
+    fn associate(this: &Decimal, that: &Decimal) -> Vec<(u8, u8)> {
+        let mut redc = Decimal::new();
+        if this.point < that.point {
+            return Decimal::associate(that, this).iter()
+                           .map(|&(x, y)| (y, x))
+                           .collect::<Vec<(u8, u8)>>()
         }
-        zip
-    }
-
-    fn reduce(this: &Decimal, that: &Decimal) -> Vec<(u8, u8)> {
-        let mut reduced = Decimal::new();
-        if this.power < that.power {
-            return Decimal::reduce(that, this).iter()
-                   .map(|&(x, y)| (y, x)).collect::<Vec<(u8, u8)>>()
+        redc.digits = iter::repeat(0)
+                     .take((this.point - that.point) as usize)
+                     .chain(this.digits.clone()).collect::<Vec<u8>>();
+        redc.point = that.point;
+        let mut zipped = vec![];
+        for i in 0..max(redc.digits.len(), that.digits.len()) {
+            zipped.push((*redc.digits.get(i).unwrap_or(&0), 
+                         *that.digits.get(i).unwrap_or(&0)));
         }
-        reduced.digits = iter::repeat(0)
-                         .take((this.power - that.power) as usize)
-                         .chain(this.digits.clone())
-                         .collect::<Vec<u8>>();
-        reduced.power = that.power;
-        Decimal::zip(&reduced, that)
+        zipped
     }
 
-    fn flip_neg(&self) -> Decimal {
+    fn change_sign(&self) -> Decimal {
         let mut flipped = self.clone();
-        flipped.neg = !self.neg;
+        flipped.sign = -self.sign;
         flipped
-    }
-
-    fn reduced_form(&self) -> Decimal {
-        let mut normal = self.clone();
-        while let Some(&d) = normal.digits.last() {
-            if d != 0 { break; }
-            normal.digits.pop();
-        }
-        while let Some(&d) = normal.digits.first() {
-            if d != 0 { break; }
-            normal.power += 1;
-            normal.digits.remove(0); 
-        }
-        if normal.digits == [] {
-            normal = Decimal::new();
-            normal.digits.push(0);
-        }
-        normal
-    }
-}
-
-impl PartialEq for Decimal {
-    fn eq(&self, other: &Decimal) -> bool {
-        Some(Ordering::Equal) == 
-        self.reduced_form()
-            .partial_cmp(&other.reduced_form()) 
     }
 }
 
 impl PartialOrd for Decimal {
     fn partial_cmp(&self, other: &Decimal) -> Option<Ordering> {
-        if self.neg && !other.neg { return Some(Ordering::Less) }
-        else if !self.neg && other.neg { return Some(Ordering::Greater) }
-        for &(x, y) in Decimal::reduce(self, other).iter().rev() {
+        if self.sign * other.sign < 0 {
+            if self.sign > 0 { 
+                return Some(Ordering::Greater) 
+            } else { 
+                return Some(Ordering::Less) 
+            }
+        }
+        for &(x, y) in Decimal::associate(self, other).iter().rev() {
             if x != y { 
-                if !self.neg { return x.partial_cmp(&y) }
-                else { return y.partial_cmp(&x) }
+                if self.sign > 0 { 
+                    return x.partial_cmp(&y) 
+                } else { 
+                    return y.partial_cmp(&x) 
+                }
             }
         }
         Some(Ordering::Equal)
     }
 }
 
+impl PartialEq for Decimal {
+    fn eq(&self, other: &Decimal) -> bool {
+        self.partial_cmp(&other) == Some(Ordering::Equal)
+    }
+}
+
 impl Add for Decimal {
     type Output = Decimal;
-
     fn add(self, other: Decimal) -> Decimal {
-        let (x, y) = (self.reduced_form(), other.reduced_form());
-        
         let mut sum = Decimal::new();
-        sum.power = min(x.power, y.power);
-        
-        if x.neg && y.neg { sum.neg = true; }
-        else if x.neg { return y.sub(x.flip_neg()) }
-        else if y.neg { return x.sub(y.flip_neg()) }
-        
+        sum.point = min(self.point, other.point);
+        if self.sign * other.sign > 0 { 
+            sum.sign = self.sign; 
+        } else 
+        if self.sign < 0 { 
+            return other.sub(self.change_sign()) 
+        } else { 
+            return self.sub(other.change_sign()) 
+        }
         let mut carry = 0;
-        for (a, b) in Decimal::reduce(&x, &y) {
+        for (a, b) in Decimal::associate(&self, &other) {
             sum.digits.push((a + b + carry) % 10);
             carry = (a + b + carry) / 10;
         }
         if carry != 0 { sum.digits.push(carry) }
-        
-        sum.reduced_form()
+        sum
     }
 }
 
 impl Sub for Decimal {
     type Output = Decimal;
-
     fn sub(self, other: Decimal) -> Decimal {
-        if other.neg { return self.add(other.flip_neg()) }
-        else if self < other { return other.sub(self).flip_neg() }
-        
-        let (x, y) = (self.reduced_form(), other.reduced_form());
-        
+        if other.sign < 0 { 
+            return self.add(other.change_sign()) 
+        } else 
+        if self < other { 
+            return other.sub(self).change_sign() 
+        }
         let mut diff = Decimal::new();
-        diff.power = min(x.power, y.power);
-        
+        diff.point = min(self.point, other.point);
         let mut carry = 0;
-        for (a, b) in Decimal::reduce(&x, &y) {
+        for (a, b) in Decimal::associate(&self, &other) {
             if a >= b + carry {
                 diff.digits.push(a - b - carry);
                 carry = 0;
@@ -150,33 +132,27 @@ impl Sub for Decimal {
                 carry = 1;
             }
         }
-        
-        diff.reduced_form()
+        diff
     }
 }
 
 impl Mul for Decimal {
     type Output = Decimal;
-
     fn mul(self, other: Decimal) -> Decimal {
-        let (x, y) = (self.reduced_form(), other.reduced_form());
-        
         let mut prod = Decimal::new();
-        prod.power = x.power + y.power;
-
-        for (i, a) in x.digits.iter().enumerate() {
+        prod.point = self.point + other.point;
+        for (i, a) in self.digits.iter().enumerate() {
             let mut row = Decimal::new();
-            row.power = i as isize + prod.power;
+            row.point = prod.point + i as isize;
             let mut carry = 0;
-            for b in &y.digits {
+            for b in &other.digits {
                 row.digits.push((a * b + carry) % 10);
                 carry = (a * b + carry) / 10; 
             }
             if carry > 0 { row.digits.push(carry); }
             prod = prod.add(row);
         }
-        prod.neg = x.neg != y.neg;
-
-        prod.reduced_form()
+        prod.sign = -self.sign & other.sign;
+        prod
     }
 }
