@@ -27,3 +27,50 @@ test result: ok. 8 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; fini
 running 0 tests
 
 test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+
+
+>cargo test -- --include-ignored
+    Updating crates.io index
+   Compiling proc-macro2 v1.0.47
+   Compiling quote v1.0.21
+   Compiling unicode-ident v1.0.5
+   Compiling syn v1.0.103
+   Compiling serde v1.0.147
+   Compiling thiserror v1.0.37
+   Compiling once_cell v1.16.0
+   Compiling toml v0.5.9
+   Compiling thiserror-impl v1.0.37
+   Compiling enum-iterator-derive v1.1.0
+   Compiling enum-iterator v1.2.0
+   Compiling proc-macro-crate v1.2.1
+   Compiling int-enum-impl v0.5.0
+   Compiling int-enum v0.5.0
+   Compiling resistor-color v1.0.0 (~\exercism\rust\resistor-color)
+    Finished test [unoptimized + debuginfo] target(s) in 37.74s
+     Running unittests src\lib.rs (target\debug\deps\resistor_color-80337f0d13ad9175.exe)
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running tests\resistor-color.rs (target\debug\deps\resistor_color-25f88a3a1ff8602b.exe)
+
+running 8 tests
+test test_11_out_of_range ... ok
+test test_2 ... ok
+test test_6 ... ok
+test test_8 ... ok
+test test_all_colors ... ok
+test test_black ... ok
+test test_orange ... ok
+test test_white ... ok
+
+test result: ok. 8 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+   Doc-tests resistor-color
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
