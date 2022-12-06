@@ -1,0 +1,37 @@
+>cargo test
+   Compiling affine-cipher v1.0.0 (~\exercism\rust\affine-cipher)
+    Finished test [unoptimized + debuginfo] target(s) in 2.09s
+     Running unittests src\lib.rs (target\debug\deps\affine_cipher-a2984dfed821d798.exe)
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running tests\affine-cipher.rs (target\debug\deps\affine_cipher-92c21f9712e6167d.exe)
+
+running 16 tests
+test decode_all_the_letters ... ok
+test decode_numbers ... ok
+test decode_exercism ... ok
+test decode_a_sentence ... ok
+test decode_with_a_not_coprime_to_m ... ok
+test decode_with_too_many_spaces ... ok
+test encode_all_the_letters ... ok
+test decode_with_no_spaces_in_input ... ok
+test encode_deep_thought ... ok
+test encode_no ... ok
+test encode_numbers ... ok
+test encode_o_m_g ... ok
+test encode_mindblowingly ... ok
+test encode_with_a_not_coprime_to_m ... ok
+test encode_yes ... ok
+test encode_omg ... ok
+
+test result: ok. 16 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+   Doc-tests affine-cipher
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
