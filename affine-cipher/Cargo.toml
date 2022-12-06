@@ -2,3 +2,4 @@
 edition = "2021"
 name = "affine-cipher"
 version = "1.0.0"
+authors = ["heptalophos"]
