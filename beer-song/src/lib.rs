@@ -1,16 +1,12 @@
 pub fn verse(n: u32) -> String {
-    format!("{p}\n{c}\n", 
-            p = premise(n), 
-            c = conclusion(n))
+    format!("{p}\n{c}\n", p = premise(n), c = conclusion(n))
 }
 
 pub fn sing(start: u32, end: u32) -> String {
     if start == end { 
         return verse(end) 
     } 
-    format!("{0}\n{1}", 
-            verse(start), 
-            sing(start - 1, end).as_str())
+    format!("{0}\n{1}", verse(start), sing(start - 1, end).as_str())
 }
 
 fn premise(bottles: u32) -> String {
