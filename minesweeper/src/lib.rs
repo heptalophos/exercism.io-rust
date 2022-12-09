@@ -21,10 +21,10 @@ pub fn annotate(minefield: &[&str]) -> Vec<String> {
     minefield.iter().enumerate()
              .map(|(r, row)| {
                 row.chars().enumerate()
-                   .map(|(c, tile)| 
-                        match tile {
+                   .map(|(c, tile)| match tile {
                             '*' => MINE,
                              _  => tile_value(r, c, minefield)
-                   }).collect()
+                        }
+                    ).collect()
              }).collect()
 }
