@@ -31,3 +31,38 @@ running 0 tests
 
 test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
 
+
+
+>cargo test
+
+    Finished test [unoptimized + debuginfo] target(s) in 0.01s
+     Running unittests src\lib.rs (target\debug\deps\allergies-0a772dd4fdddb918.exe)
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running tests\allergies.rs (target\debug\deps\allergies-5724447f22a08e09.exe)
+
+running 12 tests
+test allergic_to_everything ... ok
+test allergic_to_eggs_and_shellfish ... ok
+test allergic_to_eggs_and_peanuts ... ok
+test is_allergic_to_eggs ... ok
+test allergic_to_just_peanuts ... ok
+test allergic_to_just_strawberries ... ok
+test allergic_to_many_things ... ok
+test allergic_to_just_eggs ... ok
+test is_allergic_to_eggs_and_shellfish_but_not_strawberries ... ok
+test is_not_allergic_to_anything ... ok
+test no_allergies_at_all ... ok
+test scores_over_255_do_not_trigger_false_positives ... ok
+
+test result: ok. 12 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+   Doc-tests allergies
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+

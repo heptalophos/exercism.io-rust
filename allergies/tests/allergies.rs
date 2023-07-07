@@ -3,17 +3,13 @@ use allergies::*;
 fn compare_allergy_vectors(expected: &[Allergen], actual: &[Allergen]) {
     for element in expected {
         if !actual.contains(element) {
-            panic!(
-                "Allergen missing\n  {:?} should be in {:?}",
-                element, actual
-            );
+            panic!("Allergen missing\n  {element:?} should be in {actual:?}");
         }
     }
 
     if actual.len() != expected.len() {
         panic!(
-            "Allergy vectors are of different lengths\n  expected {:?}\n  got {:?}",
-            expected, actual
+            "Allergy vectors are of different lengths\n  expected {expected:?}\n  got {actual:?}"
         );
     }
 }
@@ -34,7 +30,7 @@ fn is_allergic_to_eggs() {
 
 #[test]
 // #[ignore]
-fn is_allergic_to_egg_shellfish_and_strawberries() {
+fn is_allergic_to_eggs_and_shellfish_but_not_strawberries() {
     let allergies = Allergies::new(5);
     assert!(allergies.is_allergic_to(&Allergen::Eggs));
     assert!(allergies.is_allergic_to(&Allergen::Shellfish));

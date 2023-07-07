@@ -25,7 +25,8 @@ impl Allergies {
     }
 
     pub fn allergies(&self) -> Vec<Allergen> {
-        Allergies::allergens().iter()
+        Allergies::allergens()
+        .iter()
         .filter(|allergen| self.is_allergic_to(allergen))
         .map(|x| *x).collect()
     }
