@@ -23,13 +23,13 @@ fn is_not_allergic_to_anything() {
 }
 
 #[test]
-#[ignore]
+// #[ignore]
 fn is_allergic_to_eggs() {
     assert!(Allergies::new(1).is_allergic_to(&Allergen::Eggs));
 }
 
 #[test]
-#[ignore]
+// #[ignore]
 fn is_allergic_to_eggs_and_shellfish_but_not_strawberries() {
     let allergies = Allergies::new(5);
     assert!(allergies.is_allergic_to(&Allergen::Eggs));
@@ -38,7 +38,7 @@ fn is_allergic_to_eggs_and_shellfish_but_not_strawberries() {
 }
 
 #[test]
-#[ignore]
+// #[ignore]
 fn no_allergies_at_all() {
     let expected = &[];
     let allergies = Allergies::new(0).allergies();
@@ -47,7 +47,7 @@ fn no_allergies_at_all() {
 }
 
 #[test]
-#[ignore]
+// #[ignore]
 fn allergic_to_just_eggs() {
     let expected = &[Allergen::Eggs];
     let allergies = Allergies::new(1).allergies();
@@ -56,7 +56,7 @@ fn allergic_to_just_eggs() {
 }
 
 #[test]
-#[ignore]
+// #[ignore]
 fn allergic_to_just_peanuts() {
     let expected = &[Allergen::Peanuts];
     let allergies = Allergies::new(2).allergies();
@@ -65,7 +65,7 @@ fn allergic_to_just_peanuts() {
 }
 
 #[test]
-#[ignore]
+// #[ignore]
 fn allergic_to_just_strawberries() {
     let expected = &[Allergen::Strawberries];
     let allergies = Allergies::new(8).allergies();
@@ -74,7 +74,7 @@ fn allergic_to_just_strawberries() {
 }
 
 #[test]
-#[ignore]
+// #[ignore]
 fn allergic_to_eggs_and_peanuts() {
     let expected = &[Allergen::Eggs, Allergen::Peanuts];
     let allergies = Allergies::new(3).allergies();
@@ -83,7 +83,7 @@ fn allergic_to_eggs_and_peanuts() {
 }
 
 #[test]
-#[ignore]
+// #[ignore]
 fn allergic_to_eggs_and_shellfish() {
     let expected = &[Allergen::Eggs, Allergen::Shellfish];
     let allergies = Allergies::new(5).allergies();
@@ -92,7 +92,7 @@ fn allergic_to_eggs_and_shellfish() {
 }
 
 #[test]
-#[ignore]
+// #[ignore]
 fn allergic_to_many_things() {
     let expected = &[
         Allergen::Strawberries,
@@ -107,7 +107,7 @@ fn allergic_to_many_things() {
 }
 
 #[test]
-#[ignore]
+// #[ignore]
 fn allergic_to_everything() {
     let expected = &[
         Allergen::Eggs,
@@ -125,7 +125,7 @@ fn allergic_to_everything() {
 }
 
 #[test]
-#[ignore]
+// #[ignore]
 fn scores_over_255_do_not_trigger_false_positives() {
     let expected = &[
         Allergen::Eggs,
