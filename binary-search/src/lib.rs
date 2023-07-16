@@ -2,7 +2,7 @@ pub fn find<H, N>(array: H, key: N) -> Option<usize>
 where H: AsRef<[N]>, N: Ord {
     use std::cmp::Ordering::{Less, Equal, Greater};
 
-    let haystaq = array.as_ref();
+    let haystaq  = array.as_ref();
     let mut min = 0;
     let mut max = haystaq.len();
 
@@ -10,7 +10,7 @@ where H: AsRef<[N]>, N: Ord {
         
         if min > max { return None }
         
-        let mid = (min + max) / 2;
+        let mid = (min + max) >> 1;
         let needle = key.cmp(haystaq.get(mid)?);
         
         match needle {
