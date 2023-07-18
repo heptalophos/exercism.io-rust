@@ -23,3 +23,40 @@ running 0 tests
 
 test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
 
+
+
+
+>cargo test -- --include-ignored
+   Compiling armstrong_numbers v1.1.0 (~\exercism\rust\armstrong-numbers)
+    Finished test [unoptimized + debuginfo] target(s) in 1.34s
+     Running unittests src\lib.rs (target\debug\deps\armstrong_numbers-871b20ae0e2c0234.exe)
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running tests\armstrong-numbers.rs (target\debug\deps\armstrong_numbers-3eb450f554f834a3.exe)
+
+running 13 tests
+test test_four_digit_armstrong_number ... ok
+test test_four_digit_non_armstrong_number ... ok
+test test_nine_digit_armstrong_number ... ok
+test test_nine_digit_non_armstrong_number ... ok
+test test_properly_handles_overflow ... ok
+test test_seven_digit_armstrong_number ... ok
+test test_seven_digit_non_armstrong_number ... ok
+test test_single_digit_numbers_are_armstrong_numbers ... ok
+test test_ten_digit_non_armstrong_number ... ok
+test test_there_are_no_2_digit_armstrong_numbers ... ok
+test test_three_digit_armstrong_number ... ok
+test test_three_digit_non_armstrong_number ... ok
+test test_zero_is_an_armstrong_number ... ok
+
+test result: ok. 13 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+   Doc-tests armstrong_numbers
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
