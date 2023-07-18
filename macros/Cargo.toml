@@ -2,6 +2,5 @@
 edition = "2021"
 name = "macros"
 version = "0.1.0"
-authors = ["heptalophos"]
 
 [dependencies]
