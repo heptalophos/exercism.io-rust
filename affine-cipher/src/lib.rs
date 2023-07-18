@@ -9,10 +9,9 @@ const A: i32 = b'a' as i32;
 /// Encodes the plaintext using the affine cipher with key (`a`, `b`). 
 pub fn encode(plaintext: &str, a: i32, b: i32) -> Result<String, AffineCipherError> {
     if !coprime(a, M) {
-        return Err(AffineCipherError::NotCoprime(a))
+        return Err (AffineCipherError::NotCoprime(a))
     }
-    let affine: String = 
-        plaintext.to_ascii_lowercase().chars()
+    Ok (plaintext.to_ascii_lowercase().chars()
                  .filter(|c| c.is_alphanumeric())
                  .map(|c| if c.is_numeric() { c }
                           else { 
@@ -24,27 +23,26 @@ pub fn encode(plaintext: &str, a: i32, b: i32) -> Result<String, AffineCipherErr
                  .chunks(5)
                  .map(|s| s.iter().collect::<String>())
                  .collect::<Vec<String>>()
-                 .join(" ");
-    Ok(affine)
+                 .join(" ")
+    )
 }
 
 /// Decodes the ciphertext using the affine cipher with key (`a`, `b`).
 pub fn decode(ciphertext: &str, a: i32, b: i32) -> Result<String, AffineCipherError> {
     if !coprime(a, M) {
-        return Err(AffineCipherError::NotCoprime(a))
+        return Err (AffineCipherError::NotCoprime(a))
     }
-    let affine: String = 
-        ciphertext.chars()
+    Ok (ciphertext.chars()
                   .filter(|c| c.is_alphanumeric())
-                  .map(|c|  if c.is_numeric() { c }
-                            else { 
+                  .map(|c|   if c.is_numeric() { c }
+                             else { 
                                 let x = mmi(a) * ((c as i32 - A) - b) % M;
                                 let d = if x < 0 { x + M } else { x };
                                 (d + A) as u8 as char 
-                            }
+                             }
                   )
-                  .collect::<String>();
-    Ok(affine)
+                  .collect::<String>()
+    )
 }
 
 /// Auxiliary 
