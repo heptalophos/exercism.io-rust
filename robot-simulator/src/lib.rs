@@ -29,6 +29,14 @@ impl Robot {
         Robot { x: x, y: y, dir: d}
     }
 
+    pub fn position(&self) -> (i32, i32) {
+        (self.x, self.y)
+    }
+
+    pub fn direction(&self) -> &Direction {
+        &self.dir
+    }
+
     pub fn turn_right(self) -> Self {
         Robot::new(self.x, self.y, Direction::from(self.dir as u8 + 1))
     }
@@ -58,13 +66,5 @@ impl Robot {
             }
         }
         robot
-    }
-
-    pub fn position(&self) -> (i32, i32) {
-        (self.x, self.y)
-    }
-
-    pub fn direction(&self) -> &Direction {
-        &self.dir
     }
 }
