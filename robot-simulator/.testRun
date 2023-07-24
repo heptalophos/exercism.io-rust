@@ -40,3 +40,47 @@ running 0 tests
 
 test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
 
+
+
+
+>cargo test -- --include-ignored
+   Compiling robot-simulator v2.2.0 (~\exercism\rust\robot-simulator)
+    Finished test [unoptimized + debuginfo] target(s) in 1.59s
+     Running unittests src\lib.rs (target\debug\deps\robot_simulator-3e0aaf94b9d071bd.exe)
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running tests\robot-simulator.rs (target\debug\deps\robot_simulator-b975f961cd37abc7.exe)
+
+running 20 tests
+test advance_decreases_the_y_coordinate_by_one_when_facing_south ... ok
+test advance_decreases_the_x_coordinate_by_one_when_facing_west ... ok
+test advance_increases_the_x_coordinate_by_one_when_facing_east ... ok
+test advance_increases_the_y_coordinate_by_one_when_facing_north ... ok
+test follow_instructions_to_move_west_and_south ... ok
+test advance_does_not_change_the_direction ... ok
+test follow_instructions_to_move_east_and_north ... ok
+test follow_instructions_to_move_west_and_north ... ok
+test positions_can_be_negative ... ok
+test robots_are_created_with_position_and_direction ... ok
+test turning_left_does_not_change_position ... ok
+test turning_left_from_east_points_the_robot_north ... ok
+test turning_left_from_north_points_the_robot_west ... ok
+test turning_left_from_south_points_the_robot_east ... ok
+test turning_left_from_west_points_the_robot_south ... ok
+test turning_right_does_not_change_position ... ok
+test turning_right_from_east_points_the_robot_south ... ok
+test turning_right_from_north_points_the_robot_east ... ok
+test turning_right_from_south_points_the_robot_west ... ok
+test turning_right_from_west_points_the_robot_north ... ok
+
+test result: ok. 20 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+   Doc-tests robot-simulator
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
