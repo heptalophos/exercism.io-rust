@@ -1,0 +1,40 @@
+>cargo test -- --include-ignored
+   Compiling paasio v0.0.0 (~\exercism\rust\paasio)
+    Finished test [unoptimized + debuginfo] target(s) in 0.65s
+     Running unittests src\lib.rs (target\debug\deps\paasio-8d94e9823fab5eea.exe)
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running tests\paasio.rs (target\debug\deps\paasio-182ee92c828d5f0b.exe)
+
+running 19 tests
+test read_byte_literal::test_read_buffered_chunks ... ok
+test read_byte_literal::test_read_passthrough ... ok
+test read_byte_literal::test_read_chunks ... ok
+test read_string::test_read_buffered_chunks ... ok
+test read_stats_by_ref_returns_wrapped_reader ... ok
+test read_file::test_read_buffered_chunks ... ok
+test read_string::test_read_chunks ... ok
+test read_file::test_read_passthrough ... ok
+test read_string::test_read_passthrough ... ok
+test read_file::test_read_chunks ... ok
+test test_create_stats ... ok
+test write_byte_literal::test_sink_buffered_windowed ... ok
+test write_byte_literal::test_sink_oneshot ... ok
+test write_byte_literal::test_sink_windowed ... ok
+test write_byte_literal::test_write_passthrough ... ok
+test write_string::test_sink_buffered_windowed ... ok
+test write_string::test_sink_oneshot ... ok
+test write_string::test_sink_windowed ... ok
+test write_string::test_write_passthrough ... ok
+
+test result: ok. 19 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+   Doc-tests paasio
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
