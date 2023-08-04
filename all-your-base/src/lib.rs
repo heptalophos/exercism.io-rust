@@ -36,17 +36,21 @@ pub enum Error {
 ///  * Never output leading 0 digits, unless the input number is 0, in which the output must be `[0]`.
 ///    However, your function must be able to process input with leading 0 digits.
 ///
-pub fn convert(number: &[u32], from_base: u32, to_base: u32) -> 
-                                            Result<Vec<u32>, Error> {
+pub fn convert(number: &[u32], 
+               from_base: u32, 
+               to_base: u32)    -> Result<Vec<u32>, Error> 
+{
     if from_base <= 1 { return Err(Error::InvalidInputBase)  } 
     if to_base <= 1   { return Err(Error::InvalidOutputBase) } 
     if let Some(x) = number.iter()
-                           .find(|&&d| d >= from_base)
-                           .cloned() { return Err(Error::InvalidDigit(x)) }
+                          .find(|&&d| d >= from_base)
+                          .cloned() { 
+                                return Err(Error::InvalidDigit(x)) 
+                           }
 
-    let mut from_form = number.iter().fold(0, |acc, d| acc * from_base + *d);
+    let mut from_form = number.iter()
+                              .fold(0, |acc, d| acc * from_base + *d);
     if from_form == 0 { return Ok(vec![0]) }
-
     let mut to_base_vector = vec![];
     while from_form > 0 {
         to_base_vector.push(from_form % to_base);
