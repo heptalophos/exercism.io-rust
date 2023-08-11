@@ -1,1 +1,9 @@
-{"track":"rust","exercise":"secret-handshake","id":"4cc6dcee6b7d4694b2325bccda0f702f","url":"https://exercism.org/tracks/rust/exercises/secret-handshake","handle":"heptalophos","is_requester":true,"auto_approve":false}
+{
+    "track": "rust",
+    "exercise": "secret-handshake",
+    "id": "4cc6dcee6b7d4694b2325bccda0f702f",
+    "url": "https://exercism.org/tracks/rust/exercises/secret-handshake/solutions/4cc6dcee6b7d4694b2325bccda0f702f",
+    "handle": "heptalophos",
+    "is_requester": true,
+    "auto_approve": false
+}
