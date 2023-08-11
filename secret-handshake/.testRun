@@ -1,0 +1,33 @@
+>cargo test -- --include-ignored
+
+   Compiling secret-handshake v1.1.0 (~\exercism\rust\secret-handshake)
+    Finished test [unoptimized + debuginfo] target(s) in 1.30s
+     Running unittests src\lib.rs (target\debug\deps\secret_handshake-f19742d6a1529874.exe)
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running tests\secret-handshake.rs (target\debug\deps\secret_handshake-a1ae9339fc1cc12a.exe)
+
+running 11 tests
+test all_possible_actions ... ok
+test close_your_eyes_for_100 ... ok
+test combine_two_actions ... ok
+test jump_for_1000 ... ok
+test double_blink_for_10 ... ok
+test do_nothing_for_zero ... ok
+test reverse_all_possible_actions ... ok
+test reverse_two_actions ... ok
+test reversing_no_actions_still_gives_no_actions ... ok
+test reversing_one_action_gives_the_same_action ... ok
+test wink_for_1 ... ok
+
+test result: ok. 11 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+   Doc-tests secret-handshake
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
