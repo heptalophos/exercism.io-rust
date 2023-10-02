@@ -1,7 +1,7 @@
 use std::collections::BTreeMap;
 
 #[test]
-fn test_transform_one_value() {
+fn transform_one_value() {
     let input = input_from(&[(1, vec!['A'])]);
 
     let expected = expected_from(&[('a', 1)]);
@@ -10,8 +10,8 @@ fn test_transform_one_value() {
 }
 
 #[test]
-// #[ignore]
-fn test_transform_more_values() {
+#[ignore]
+fn transform_more_values() {
     let input = input_from(&[(1, vec!['A', 'E', 'I', 'O', 'U'])]);
 
     let expected = expected_from(&[('a', 1), ('e', 1), ('i', 1), ('o', 1), ('u', 1)]);
@@ -20,8 +20,8 @@ fn test_transform_more_values() {
 }
 
 #[test]
-// #[ignore]
-fn test_more_keys() {
+#[ignore]
+fn more_keys() {
     let input = input_from(&[(1, vec!['A', 'E']), (2, vec!['D', 'G'])]);
 
     let expected = expected_from(&[('a', 1), ('e', 1), ('d', 2), ('g', 2)]);
@@ -30,8 +30,8 @@ fn test_more_keys() {
 }
 
 #[test]
-// #[ignore]
-fn test_full_dataset() {
+#[ignore]
+fn full_dataset() {
     let input = input_from(&[
         (1, vec!['A', 'E', 'I', 'O', 'U', 'L', 'N', 'R', 'S', 'T']),
         (2, vec!['D', 'G']),
