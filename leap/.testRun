@@ -27,3 +27,42 @@ running 0 tests
 
 test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
 
+
+
+
+>cargo test -- --include-ignored
+   Compiling leap v1.6.0 (~\exercism\rust\leap)
+    Finished test [unoptimized + debuginfo] target(s) in 1.11s
+     Running unittests src\lib.rs (target\debug\deps\leap-2d81f810e8b22764.exe)
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running tests\leap.rs (target\debug\deps\leap-386d90feccb21659.exe)
+
+running 14 tests
+test test_any_old_year ... ok
+test test_century ... ok
+test test_early_years ... ok
+test test_year_divisible_by_100_but_not_by_3_is_still_not_a_leap_year ... ok
+test test_exceptional_centuries ... ok
+test test_year_divisible_by_200_not_divisible_by_400_common_year ... ok
+test test_year_divisible_by_2_not_divisible_by_4_in_common_year ... ok
+test test_year_divisible_by_400_but_not_by_125_is_still_a_leap_year ... ok
+test test_year_divisible_by_100_not_divisible_by_400_common_year ... ok
+test test_year_divisible_by_400_leap_year ... ok
+test test_year_divisible_by_4_and_5_is_still_a_leap_year ... ok
+test test_year_divisible_by_4_not_divisible_by_100_leap_year ... ok
+test test_year_not_divisible_by_4_common_year ... ok
+test test_years_1600_to_1699 ... ok
+
+test result: ok. 14 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+
+running 0 tests
+
+   Doc-tests leap
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
