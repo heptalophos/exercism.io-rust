@@ -1,21 +1,30 @@
 # ETL
 
-We are going to do the `Transform` step of an Extract-Transform-Load.
+Welcome to ETL on Exercism's Rust Track.
+If you need help running the tests or submitting your code, check out `HELP.md`.
 
-### ETL
+## Introduction
 
-Extract-Transform-Load (ETL) is a fancy way of saying, "We have some crufty, legacy data over in this system, and now we need it in this shiny new system over here, so
-we're going to migrate this."
+You work for a company that makes an online multiplayer game called Lexiconia.
 
-(Typically, this is followed by, "We're only going to need to run this
-once." That's then typically followed by much forehead slapping and
-moaning about how stupid we could possibly be.)
+To play the game, each player is given 13 letters, which they must rearrange to create words.
+Different letters have different point values, since it's easier to create words with some letters than others.
 
-### The goal
+The game was originally launched in English, but it is very popular, and now the company wants to expand to other languages as well.
 
-We're going to extract some Scrabble scores from a legacy system.
+Different languages need to support different point values for letters.
+The point values are determined by how often letters are used, compared to other letters in that language.
 
-The old system stored a list of letters per score:
+For example, the letter 'C' is quite common in English, and is only worth 3 points.
+But in Norwegian it's a very rare letter, and is worth 10 points.
+
+To make it easier to add new languages, your team needs to change the way letters and their point values are stored in the game.
+
+## Instructions
+
+Your task is to change the data format of letters and their point values in the game.
+
+Currently, letters are stored in groups based on their score, in a one-to-many mapping.
 
 - 1 point: "A", "E", "I", "O", "U", "L", "N", "R", "S", "T",
 - 2 points: "D", "G",
@@ -25,103 +34,49 @@ The old system stored a list of letters per score:
 - 8 points: "J", "X",
 - 10 points: "Q", "Z",
 
-The shiny new Scrabble system instead stores the score per letter, which
-makes it much faster and easier to calculate the score for a word. It
-also stores the letters in lower-case regardless of the case of the
-input letters:
+This needs to be changed to store each individual letter with its score in a one-to-one mapping.
 
 - "a" is worth 1 point.
 - "b" is worth 3 points.
 - "c" is worth 3 points.
 - "d" is worth 2 points.
-- Etc.
+- etc.
 
-Your mission, should you choose to accept it, is to transform the legacy data
-format to the shiny new format.
+As part of this change, the team has also decided to change the letters to be lower-case rather than upper-case.
 
-### Notes
-
-A final note about scoring, Scrabble is played around the world in a
-variety of languages, each with its own unique scoring table. For
-example, an "E" is scored at 2 in the Māori-language version of the
-game while being scored at 4 in the Hawaiian-language version.
-
-## Rust Installation
-
-Refer to the [exercism help page][help-page] for Rust installation and learning
-resources.
-
-## Writing the Code
-
-Execute the tests with:
-
-```bash
-$ cargo test
-```
-
-All but the first test have been ignored. After you get the first test to
-pass, open the tests source file which is located in the `tests` directory
-and remove the `#[ignore]` flag from the next test and get the tests to pass
-again. Each separate test is a function with `#[test]` flag above it.
-Continue, until you pass every test.
-
-If you wish to run all ignored tests without editing the tests source file, use:
-
-```bash
-$ cargo test -- --ignored
-```
-
-To run a specific test, for example `some_test`, you can use:
-
-```bash
-$ cargo test some_test
-```
-
-If the specific test is ignored use:
-
-```bash
-$ cargo test some_test -- --ignored
-```
-
-To learn more about Rust tests refer to the [online test documentation][rust-tests]
-
-Make sure to read the [Modules][modules] chapter if you
-haven't already, it will help you with organizing your files.
-
-## Further improvements
-
-After you have solved the exercise, please consider using the additional utilities, described in the [installation guide](https://exercism.io/tracks/rust/installation), to further refine your final solution.
-
-To format your solution, inside the solution directory use
-
-```bash
-cargo fmt
-```
-
-To see, if your solution contains some common ineffective use cases, inside the solution directory use
-
-```bash
-cargo clippy --all-targets
-```
-
-## Submitting the solution
-
-Generally you should submit all files in which you implemented your solution (`src/lib.rs` in most cases). If you are using any external crates, please consider submitting the `Cargo.toml` file. This will make the review process faster and clearer.
-
-## Feedback, Issues, Pull Requests
-
-The [exercism/rust](https://github.com/exercism/rust) repository on GitHub is the home for all of the Rust exercises. If you have feedback about an exercise, or want to help implement new exercises, head over there and create an issue. Members of the rust track team are happy to help!
-
-If you want to know more about Exercism, take a look at the [contribution guide](https://github.com/exercism/docs/blob/master/contributing-to-language-tracks/README.md).
-
-[help-page]: https://exercism.io/tracks/rust/learning
-[modules]: https://doc.rust-lang.org/book/ch07-02-defining-modules-to-control-scope-and-privacy.html
-[cargo]: https://doc.rust-lang.org/book/ch14-00-more-about-cargo.html
-[rust-tests]: https://doc.rust-lang.org/book/ch11-02-running-tests.html
+~~~~exercism/note
+If you want to look at how the data was previously structured and how it needs to change, take a look at the examples in the test suite.
+~~~~
 
 ## Source
 
-The Jumpstart Lab team [http://jumpstartlab.com](http://jumpstartlab.com)
+### Created by
 
-## Submitting Incomplete Solutions
-It's possible to submit an incomplete solution so you can see how others have completed the exercise.
+- @EduardoBautista
+
+### Contributed to by
+
+- @ashleygwilliams
+- @ClashTheBunny
+- @coriolinus
+- @cwhakes
+- @EduardoBautista
+- @efx
+- @ErikSchierboom
+- @IanWhitney
+- @kotp
+- @kytrinyx
+- @lutostag
+- @mkantor
+- @navossoc
+- @nfiles
+- @petertseng
+- @rofrol
+- @stringparser
+- @tushartyagi
+- @xakon
+- @ZapAnton
+
+### Based on
+
+The Jumpstart Lab team - http://jumpstartlab.com
