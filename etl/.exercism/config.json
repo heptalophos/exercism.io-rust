@@ -3,24 +3,24 @@
     "EduardoBautista"
   ],
   "contributors": [
-    "andrewclarkson",
     "ashleygwilliams",
-    "cmcaine",
+    "ClashTheBunny",
     "coriolinus",
     "cwhakes",
-    "Dysp",
     "EduardoBautista",
     "efx",
     "ErikSchierboom",
     "IanWhitney",
+    "kotp",
     "kytrinyx",
     "lutostag",
     "mkantor",
+    "navossoc",
     "nfiles",
     "petertseng",
-    "pminten",
     "rofrol",
     "stringparser",
+    "tushartyagi",
     "xakon",
     "ZapAnton"
   ],
@@ -30,13 +30,13 @@
       "Cargo.toml"
     ],
     "test": [
-      "tests/nucleotide-count.rs"
+      "tests/etl.rs"
     ],
     "example": [
       ".meta/example.rs"
     ]
   },
-  "blurb": "Given a DNA string, compute how many times each nucleotide occurs in the string.",
-  "source": "The Calculating DNA Nucleotides_problem at Rosalind",
-  "source_url": "http://rosalind.info/problems/dna/"
+  "blurb": "We are going to do the `Transform` step of an Extract-Transform-Load.",
+  "source": "The Jumpstart Lab team",
+  "source_url": "http://jumpstartlab.com"
 }

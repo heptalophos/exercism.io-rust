@@ -5,13 +5,14 @@ pub fn count(nucleotide: char, dna: &str) -> Result<usize, char> {
     let exact = |x, y| if x == y {1} else {0};
 
     if valid(nucleotide) != 0 {
-        dna.chars().try_fold(0, |acc, n| {
-            match (valid(n), exact(n, nucleotide)) {
+        dna.chars()
+           .try_fold(0, |acc, n| {
+                match (valid(n), exact(n, nucleotide)) {
                     (1, 1) => Ok(acc + 1),
                     (1, 0) => Ok(acc),
                     (_, _) => Err(n),
-            }
-        })
+                }
+            })
     } else {
         Err(nucleotide)
     }
