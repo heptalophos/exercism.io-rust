@@ -18,3 +18,31 @@ running 0 tests
 
 test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
 
+
+
+
+>cargo test -- --include-ignored
+   Compiling etl v1.0.0 (~\exercism\rust\etl)
+    Finished test [unoptimized + debuginfo] target(s) in 2.50s
+     Running unittests src\lib.rs (target\debug\deps\etl-1897222c52afc249.exe)
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running tests\etl.rs (target\debug\deps\etl-86b34f0317dbd30b.exe)
+
+running 4 tests
+test more_keys ... ok
+test transform_one_value ... ok
+test transform_more_values ... ok
+test full_dataset ... ok
+
+test result: ok. 4 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+   Doc-tests etl
+   
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
