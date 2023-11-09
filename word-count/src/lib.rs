@@ -6,13 +6,14 @@ pub fn word_count(words: &str) -> HashMap<String, u32> {
     let boundary = |ch: char| ch.is_whitespace() ||
                     ch.is_ascii_punctuation() && ch != quote; 
     
-    words.split(boundary)
+    words.trim_matches(quote)
+         .split(boundary)
          .fold(HashMap::new(), 
             |mut count, word| {
                 if !word.is_empty() {
                     let sanitized = word.to_lowercase()
-                                        .trim_matches(quote)
-                                        .to_string();
+                                                .trim_matches(quote)
+                                                .to_string();
                 *count.entry(sanitized).or_insert(0) += 1;
             }
             count
