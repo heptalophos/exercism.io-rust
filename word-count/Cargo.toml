@@ -2,4 +2,3 @@
 edition = "2021"
 name = "word-count"
 version = "1.2.0"
-authors = ["heptalophos"]
