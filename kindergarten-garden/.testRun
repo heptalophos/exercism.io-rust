@@ -1,0 +1,41 @@
+----------------------------------------------------------------------------
+Mon Nov 13 16:39:30 GTBST 2023
+----------------------------------------------------------------------------
+>cargo test -- --include-ignored
+   Compiling kindergarten_garden v0.1.0 (~\exercism\rust\kindergarten-garden)
+    Finished test [unoptimized + debuginfo] target(s) in 1.73s
+     Running unittests src\lib.rs (target\debug\deps\kindergarten_garden-e875678d721ef26c.exe)
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running tests\kindergarten-garden.rs (target\debug\deps\kindergarten_garden-744c55c24b633d16.exe)
+
+running 17 tests
+test different_garden_with_single_student ... ok
+test for_bob_second_students_garden ... ok
+test for_david ... ok
+test for_fred ... ok
+test for_alice_first_students_garden ... ok
+test for_charlie ... ok
+test for_ginny ... ok
+test for_eve ... ok
+test for_harriet ... ok
+test for_ileana ... ok
+test for_joseph ... ok
+test for_kincaid_second_to_last_students_garden ... ok
+test for_larry_last_students_garden ... ok
+test garden_with_single_student ... ok
+test garden_with_two_students ... ok
+test second_students_garden ... ok
+test third_students_garden ... ok
+
+test result: ok. 17 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+   Doc-tests kindergarten_garden
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
