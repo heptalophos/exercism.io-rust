@@ -24,7 +24,7 @@ test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
 
 >cargo test
 
-   Compiling gigasecond v2.0.0 (C:\Users\Chris\exercism\rust\gigasecond)
+   Compiling gigasecond v2.0.0 (~\exercism\rust\gigasecond)
     Finished test [unoptimized + debuginfo] target(s) in 10.45s
      Running unittests (target\debug\deps\gigasecond-798ad47cb77635f7.exe)
 

@@ -34,7 +34,7 @@ test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
 
 
 >cargo test -- --include-ignored
-   Compiling sum-of-multiples v1.5.0 (C:\Users\Chris\exercism\rust\sum-of-multiples)
+   Compiling sum-of-multiples v1.5.0 (~\exercism\rust\sum-of-multiples)
     Finished test [unoptimized + debuginfo] target(s) in 0.99s
      Running unittests src\lib.rs (target\debug\deps\sum_of_multiples-c31fa2b74e4d5b5e.exe)
 
