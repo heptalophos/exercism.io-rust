@@ -1,7 +1,5 @@
 pub fn plants(diagram: &str, student: &str) -> Vec<&'static str> {
-    let child_cups = 
-        (2 * (student.bytes().nth(0).unwrap() - b'A')).into();
-
+    let child_cups = (2 * (student.bytes().nth(0).unwrap() - b'A')).into();
     diagram
     .lines()
     .flat_map(
