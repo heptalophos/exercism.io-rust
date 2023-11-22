@@ -12,9 +12,9 @@ pub fn word_count(words: &str) -> HashMap<String, u32> {
             |mut count, word| {
                 if !word.is_empty() {
                     let sanitized = word.to_lowercase()
-                                                .trim_matches(quote)
-                                                .to_string();
-                *count.entry(sanitized).or_insert(0) += 1;
+                                        .trim_matches(quote)
+                                        .to_string();
+                    *count.entry(sanitized).or_insert(0) += 1;
             }
             count
          })
