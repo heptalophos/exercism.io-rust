@@ -1,0 +1,33 @@
+----------------------------------------------------------------------------
+Mon Dec  4 05:04:58 GTBST 2023
+----------------------------------------------------------------------------
+>cargo test -- --include-ignored
+   Compiling knapsack v0.1.0 (~\exercism\rust\knapsack)
+    Finished test [unoptimized + debuginfo] target(s) in 1.35s
+     Running unittests src\lib.rs (target\debug\deps\knapsack-a640ecac98b8e9a9.exe)
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running tests\knapsack.rs (target\debug\deps\knapsack-292c15383d60edde.exe)
+
+running 7 tests
+test example_knapsack ... ok
+test five_items_cannot_be_greedy_by_value ... ok
+test no_items ... ok
+test five_items_cannot_be_greedy_by_weight ... ok
+test one_item_too_heavy ... ok
+test eight_items ... ok
+test fifteen_items has been running for over 60 seconds
+test fifteen_items ... ok
+
+test result: ok. 7 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 125.87s
+
+
+running 0 tests
+
+   Doc-tests knapsack
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
