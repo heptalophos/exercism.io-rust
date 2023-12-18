@@ -10,7 +10,7 @@ pub fn lowest_price(books: &[u32]) -> u32 {
                        .collect::<Vec<_>>();
     basket.sort_unstable_by(|x, y| y.cmp(x));
     for i in 0..4 { 
-        basket[i] -= basket[i + 1]; 
+        basket[i] -= basket[i + 1];
     }
     let pairs3and5 = if basket[2] <= basket[4] {basket[2]} else {basket[4]};                
     basket[2] -= pairs3and5; 
