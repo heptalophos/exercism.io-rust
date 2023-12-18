@@ -26,6 +26,6 @@ impl HighScores {
         let mut cscores = self.scores.to_vec();
         cscores.sort();
         cscores.iter().rev().take(3).copied()
-               .collect()
+               .collect::<Vec<_>>()
     }
 }
