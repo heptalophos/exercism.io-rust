@@ -39,8 +39,9 @@ impl BowlingGame {
         let mut i = 0;
         let frames = 0..=9;
         for _ in frames {
-            if let (Some(&first), Some(&second)) = 
-                (&self.rolls.get(i), &self.rolls.get(i + 1)) {
+            if let ( Some(&first), Some(&second) ) = 
+                (&self.rolls.get(i), &self.rolls.get(i + 1)) 
+            {
                 total += first + second;
                 if first == 10 || first + second == 10 {
                     if let Some(&over) = &self.rolls.get(i + 2) {

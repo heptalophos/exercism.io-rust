@@ -4,24 +4,17 @@ pub struct Item {
 }
 
 pub fn maximum_value(max_weight: u32, items: &[Item]) -> u32 {
-    max_value(max_weight, 0, &items.iter().collect::<Vec<_>>())
-}
-
-fn max_value(max_weight: u32, tot_value: u32, items: &[&Item]) -> u32 {
-    items.iter()
-         .enumerate()
-         .filter_map(|(i, item)| {
-            if item.weight > max_weight {
-                Some (tot_value)
-            }
-            else { 
-            let mut remaining = items.to_vec();
-            remaining.remove(i);
-            Some (max_value(max_weight - item.weight, 
-                            tot_value + item.value, 
-                            &remaining))
-            }
-          })
-         .max()
-         .unwrap_or_default()
+    items
+    .iter().enumerate()
+    .filter_map(|(i, item)| {
+        if item.weight > max_weight { None }
+        else {
+            let new_capacity = max_weight - item.weight;
+            let taken = item.value;
+            let not_yet_taken = &items[(i + 1)..];
+            Some (taken + maximum_value(new_capacity, not_yet_taken))
+        }
+    })
+    .max()
+    .unwrap_or_default()
 }
