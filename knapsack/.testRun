@@ -31,3 +31,35 @@ running 0 tests
 
 test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
 
+
+
+----------------------------------------------------------------------------
+Sat Dec 16 18:19:24 GTBST 2023
+----------------------------------------------------------------------------
+>cargo test -- --include-ignored
+   Compiling knapsack v0.1.0 (~\exercism\rust\knapsack)
+    Finished test [unoptimized + debuginfo] target(s) in 1.20s
+     Running unittests src\lib.rs (target\debug\deps\knapsack-a640ecac98b8e9a9.exe)
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running tests\knapsack.rs (target\debug\deps\knapsack-292c15383d60edde.exe)
+
+running 7 tests
+test eight_items ... ok
+test example_knapsack ... ok
+test five_items_cannot_be_greedy_by_weight ... ok
+test no_items ... ok
+test one_item_too_heavy ... ok
+test five_items_cannot_be_greedy_by_value ... ok
+test fifteen_items ... ok
+
+test result: ok. 7 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+   Doc-tests knapsack
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
