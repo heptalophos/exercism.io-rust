@@ -1,0 +1,36 @@
+----------------------------------------------------------------------------
+Thu Dec 21 21:43:25 GTBST 2023
+----------------------------------------------------------------------------
+>cargo test -- --include-ignored
+   Compiling alphametics v1.3.0 (~\exercism\rust\alphametics)
+    Finished test [unoptimized + debuginfo] target(s) in 1.43s
+     Running unittests src\lib.rs (target\debug\deps\alphametics-f45686933ab12f0f.exe)
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running tests\alphametics.rs (target\debug\deps\alphametics-9a286fbfe3613fb2.exe)
+
+running 11 tests
+test must_have_unique_value_for_each_letter ... ok
+test puzzle_with_four_letters ... ok
+test puzzle_with_two_digits_final_carry ... ok
+test with_three_letters ... ok
+test leading_zero_solution_is_invalid ... ok
+test puzzle_with_six_letters ... ok
+test puzzle_with_ten_letters ... ok
+test puzzle_with_seven_letters ... ok
+test sum_must_be_wide_enough ... ok
+test puzzle_with_eight_letters ... ok
+test puzzle_with_ten_letters_and_199_addends has been running for over 60 seconds
+test puzzle_with_ten_letters_and_199_addends ... ok
+
+test result: ok. 11 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 153.74s
+
+   Doc-tests alphametics
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
