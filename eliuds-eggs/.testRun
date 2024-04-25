@@ -1,0 +1,28 @@
+----------------------------------------------------------------------------
+Fri Apr 26 02:23:47 GTBDT 2024
+----------------------------------------------------------------------------
+>cargo test -- --include-ignored
+   Compiling eliuds_eggs v1.0.0 (C:\Users\Chris\exercism\rust\eliuds-eggs)
+    Finished test [unoptimized + debuginfo] target(s) in 1.14s
+     Running unittests src\lib.rs (target\debug\deps\eliuds_eggs-2f83e97cdc099de0.exe)
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running tests\eliuds-eggs.rs (target\debug\deps\eliuds_eggs-24b5a4b25fcfaf6b.exe)
+
+running 4 tests
+test test_0_eggs ... ok
+test test_13_eggs ... ok
+test test_1_egg ... ok
+test test_4_eggs ... ok
+
+test result: ok. 4 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+   Doc-tests eliuds_eggs
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
