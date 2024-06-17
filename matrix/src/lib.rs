@@ -1,17 +1,27 @@
 pub struct Matrix {
-    // Implement your Matrix struct
+    m: Vec<Vec<u32>>  
 }
 
 impl Matrix {
     pub fn new(input: &str) -> Self {
-        todo!("Create new method to store the {input}")
+        Self {
+            m: input.lines()
+               .map(|r| r.split_ascii_whitespace()
+                    .map(|v| v.parse::<u32>().unwrap())
+                    .collect::<Vec<u32>>())
+               .collect()
+        }
     }
 
     pub fn row(&self, row_no: usize) -> Option<Vec<u32>> {
-        todo!("Return the row at {row_no} (1-indexed) or None if the number is invalid")
+        self.m.get(row_no - 1).cloned()
     }
 
     pub fn column(&self, col_no: usize) -> Option<Vec<u32>> {
-        todo!("Return the column at {col_no} (1-indexed) or None if the number is invalid")
+        if col_no <= self.m[0].len() { 
+            Some(self.m.iter().map(|r| r[col_no - 1]).collect())
+        } else { 
+            None
+         }
     }
 }
