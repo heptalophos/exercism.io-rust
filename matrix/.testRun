@@ -1,0 +1,33 @@
+----------------------------------------------------------------------------
+Mon Jun 17 23:24:02 GTBDT 2024
+----------------------------------------------------------------------------
+>cargo test -- --include-ignored
+   Compiling matrix v1.0.0 (~\exercism\rust\matrix)
+    Finished test [unoptimized + debuginfo] target(s) in 2.26s
+     Running unittests src\lib.rs (target\debug\deps\matrix-4ca84114555aaf1c.exe)
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running tests\matrix.rs (target\debug\deps\matrix-e0136a2f6c064bfc.exe)
+
+running 10 tests
+test can_extract_column ... ok
+test can_extract_column_from_non_square_matrix_with_no_corresponding_row ... ok
+test can_extract_row ... ok
+test can_extract_row_from_non_square_matrix_with_no_corresponding_column ... ok
+test cannot_extract_column_with_no_corresponding_column_in_matrix ... ok
+test cannot_extract_row_with_no_corresponding_row_in_matrix ... ok
+test extract_column_from_one_number_matrix ... ok
+test extract_column_where_numbers_have_different_widths ... ok
+test extract_row_from_one_number_matrix ... ok
+test extract_row_where_numbers_have_different_widths ... ok
+
+test result: ok. 10 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+   Doc-tests matrix
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
