@@ -2,5 +2,6 @@
 edition = "2021"
 name = "matrix"
 version = "1.0.0"
+authors = ["heptalophos"]
 
 [dependencies]
