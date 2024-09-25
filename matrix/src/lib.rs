@@ -6,10 +6,10 @@ impl Matrix {
     pub fn new(input: &str) -> Self {
         Self {
             m: input.lines()
-               .map(|r| r.split_ascii_whitespace()
-                    .map(|v| v.parse::<u32>().unwrap())
-                    .collect::<Vec<u32>>())
-               .collect()
+                    .map(|r| r.split_ascii_whitespace()
+                              .map(|v| v.parse::<u32>().unwrap() )
+                              .collect::<Vec<u32>>())
+                    .collect()
         }
     }
 
