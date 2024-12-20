@@ -27,15 +27,12 @@ impl<R: Read> ReadStats<R> {
 
 impl<R: Read> Read for ReadStats<R> {
     fn read(&mut self, buf: &mut [u8]) -> Result<usize> {
-        match self.reader.read(buf) {
-            Ok(bytes_read) => {
+        let read = self.reader.read(buf); 
+        if let Ok(bytes_read) = read {
                 self.bytes_through += bytes_read;
                 self.read_ops += 1;
-                Ok(bytes_read)
-            }
-            _error => panic!("Cannot read data")
         }
-
+        read
     }
 }
 
@@ -66,17 +63,15 @@ impl<W: Write> WriteStats<W> {
 
 impl<W: Write> Write for WriteStats<W> {
     fn write(&mut self, buf: &[u8]) -> Result<usize> {
-        match self.writer.write(buf) {
-            Ok(bytes_written) => {
+        let write = self.writer.write(buf); 
+        if let Ok(bytes_written) = write {
                 self.bytes_through += bytes_written;
                 self.write_ops += 1;
-                Ok(bytes_written)
-            }
-            _error => panic!("Cannot write data")
         }
+        write
     }
 
     fn flush(&mut self) -> Result<()> {
         self.writer.flush()
-    }
+    } 
 }
