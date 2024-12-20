@@ -38,3 +38,50 @@ running 0 tests
 
 test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
 
+
+
+----------------------------------------------------------------------------
+Sat Dec 21 00:20:51 GTBST 2024
+----------------------------------------------------------------------------
+>cargo test -- --include-ignored
+   Compiling paasio v0.0.0 (~\exercism\rust\paasio)
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 3.49s
+     Running unittests src\lib.rs (target\debug\deps\paasio-bcc28521db42d58e.exe)
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running tests\paasio.rs (target\debug\deps\paasio-2eef8fa8f2907ac6.exe)
+
+running 21 tests
+test create_stats ... ok
+test read_byte_literal::read_buffered_chunks ... ok
+test read_byte_literal::read_passthrough ... ok
+test read_byte_literal::read_chunks ... ok
+test read_file::read_buffered_chunks ... ok
+test read_propagates_errors ... ok
+test read_file::read_passthrough ... ok
+test read_file::read_chunks ... ok
+test read_stats_by_ref_returns_wrapped_reader ... ok
+test read_string::read_buffered_chunks ... ok
+test read_string::read_chunks ... ok
+test read_string::read_passthrough ... ok
+test write_byte_literal::sink_buffered_windowed ... ok
+test write_byte_literal::sink_oneshot ... ok
+test write_byte_literal::sink_windowed ... ok
+test write_byte_literal::write_passthrough ... ok
+test write_propagates_errors ... ok
+test write_string::sink_buffered_windowed ... ok
+test write_string::sink_oneshot ... ok
+test write_string::sink_windowed ... ok
+test write_string::write_passthrough ... ok
+
+test result: ok. 21 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+   Doc-tests paasio
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
