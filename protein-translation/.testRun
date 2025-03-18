@@ -34,3 +34,59 @@ running 0 tests
 
 test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
 
+
+
+----------------------------------------------------------------------------
+Tue Mar 18 19:42:07 GTBST 2025
+----------------------------------------------------------------------------
+>cargo test -- --include-ignored
+   Compiling protein-translation v0.1.0 (~\exercism\rust\protein-translation)
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 3.23s
+     Running unittests src\lib.rs (target\debug\deps\protein_translation-a880b550609e76dd.exe)
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running tests\protein-translation.rs (target\debug\deps\protein_translation-aa0a7762b036680f.exe)
+
+running 30 tests
+test empty_rna_sequence_results_in_no_proteins ... ok
+test cysteine_rna_sequence_2 ... ok
+test cysteine_rna_sequence_1 ... ok
+test incomplete_rna_sequence_can_t_translate ... ok
+test leucine_rna_sequence_1 ... ok
+test leucine_rna_sequence_2 ... ok
+test incomplete_rna_sequence_can_translate_if_valid_until_a_stop_codon ... ok
+test methionine_rna_sequence ... ok
+test phenylalanine_rna_sequence_2 ... ok
+test phenylalanine_rna_sequence_1 ... ok
+test sequence_of_two_different_protein_codons_translates_into_proteins ... ok
+test sequence_of_two_non_stop_codons_does_not_translate_to_a_stop_codon ... ok
+test sequence_of_two_protein_codons_translates_into_proteins ... ok
+test serine_rna_sequence_1 ... ok
+test serine_rna_sequence_2 ... ok
+test serine_rna_sequence_3 ... ok
+test serine_rna_sequence_4 ... ok
+test stop_codon_rna_sequence_1 ... ok
+test stop_codon_rna_sequence_3 ... ok
+test stop_codon_rna_sequence_2 ... ok
+test translate_rna_strand_into_correct_protein_list ... ok
+test translation_stops_if_stop_codon_at_beginning_of_sequence ... ok
+test translation_stops_if_stop_codon_at_end_of_three_codon_sequence ... ok
+test translation_stops_if_stop_codon_at_end_of_two_codon_sequence ... ok
+test translation_stops_if_stop_codon_in_middle_of_six_codon_sequence ... ok
+test translation_stops_if_stop_codon_in_middle_of_three_codon_sequence ... ok
+test tryptophan_rna_sequence ... ok
+test tyrosine_rna_sequence_1 ... ok
+test tyrosine_rna_sequence_2 ... ok
+test unknown_amino_acids_not_part_of_a_codon_can_t_translate ... ok
+
+test result: ok. 30 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.01s
+
+   Doc-tests protein_translation
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
