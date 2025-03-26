@@ -20,9 +20,8 @@ pub fn translate(rna: &str) -> Option<Vec<&str>> {
        .map(|codon| codon.and_then(protein))
        .map_while(|p| match p {
             Some("STOP") => None,
-            Some(p) => Some(Some(p)),
-            None => Some(None),
-           
+            Some(p)		 => Some(Some(p)),
+            None         => Some(None),           
        })
        .collect::<Option<Vec<_>>>()
 }
